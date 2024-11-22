@@ -1,6 +1,6 @@
-create database dbFinalProject6
+create database dbFinalProject7
 
-use dbFinalProject6
+use dbFinalProject7
 
 --vista del administrador, se debe loguear el admin para
 create table cuentas
@@ -18,40 +18,34 @@ create table ingreso_auto
 	
 )
 
-create table tipo_vehiculo
+create table tipo_vehiculos
 (
 	Id int identity(1,1) primary key,
-	Tipo varchar(100) not null,
+	Tipo varchar(100),
 	Codigo VARCHAR(8),
 	foreign key(Codigo) references ingreso_auto(Codigo)
 )
 
-create table Estacionamiento (
+create table Estacionamientos (
     Id INT IDENTITY(1,1) PRIMARY KEY,
-    TipoVehiculoId INT NOT NULL, -- fK de tipo_vehiculo
-    TotalDisponibles INT NOT NULL,
-    Ocupados INT NOT NULL DEFAULT 0,
-    FOREIGN KEY (TipoVehiculoId) REFERENCES tipo_vehiculo(Id)
+    TipoVehiculoId INT, -- fK de tipo_vehiculo
+    TotalDisponibles INT,
+    Ocupados INT DEFAULT 0,
+    FOREIGN KEY (TipoVehiculoId) REFERENCES tipo_vehiculos(Id)
 )
 
-create table monto_a_pagar
+CREATE table montoPagarCar
 (
 	Id int identity(1,1) primary key,
 	Codigo VARCHAR(8),
 	Precio decimal(10,2),
+	IdEstacionamiento INT
+	foreign key(IdEstacionamiento) references Estacionamientos(Id),
 	foreign key(Codigo) references ingreso_auto(Codigo)
 )
 
 --esta vista es para que el administrador tenga todos los registros de los ingresos y fechas de los vehiculos que han sido registrados
-create table registro
-(
-	Id_registro int identity(1,1) primary key,
-	Id int,
-	Codigo VARCHAR(8),
-	foreign key(Id) references monto_a_pagar(Id),
-	foreign key(Codigo) references ingreso_auto(Codigo),
-
-)
+--En lugar de crear una tabla para guardar todo, mejor creare una vista para el administrador
 
 
 
@@ -59,16 +53,16 @@ create table registro
 
 
 -- Tipos de vehículos
-INSERT INTO tipo_vehiculo (Tipo) VALUES 
+INSERT INTO tipo_vehiculos (Tipo) VALUES 
 ('Automovil'),
 ('Motocicleta'),
 ('Camion')
 
-select * from tipo_vehiculo
+select * from tipo_vehiculos
 
 
 -- Estacionamientos por tipo
-INSERT INTO Estacionamiento (TipoVehiculoId, TotalDisponibles) VALUES 
+INSERT INTO Estacionamientos (TipoVehiculoId, TotalDisponibles) VALUES 
 (1, 50),  -- Automóviles: 50 espacios
 (2, 30),  -- Motocicletas: 30 espacios
 (3, 10)  -- Camiones: 10 espacios
@@ -79,29 +73,27 @@ INSERT INTO Estacionamiento (TipoVehiculoId, TotalDisponibles) VALUES
 
 
 
-create view ver_disponibilidad
+CREATE view ver_disponibilidad
 as
-select tipo_vehiculo.Tipo, Estacionamiento.TotalDisponibles, Estacionamiento.Ocupados from tipo_vehiculo
-inner join Estacionamiento on  tipo_vehiculo.Id = Estacionamiento.TipoVehiculoId
+select tipo_vehiculos.Tipo, Estacionamientos.TotalDisponibles, Estacionamientos.Ocupados from tipo_vehiculos
+inner join Estacionamientos on  tipo_vehiculos.Id = Estacionamientos.TipoVehiculoId
 
 
 
 
 
-
-
-ALTER PROCEDURE RegistrarEntrada
+CREATE PROCEDURE RegistrarEntrada
     @TipoVehiculoId INT
 AS
 BEGIN
     IF EXISTS (
         SELECT 1 
-        FROM Estacionamiento 
+        FROM Estacionamientos 
         WHERE TipoVehiculoId = @TipoVehiculoId AND TotalDisponibles > Ocupados
     )
     BEGIN
 
-        UPDATE Estacionamiento
+        UPDATE Estacionamientos
         SET Ocupados = Ocupados + 1
         WHERE TipoVehiculoId = @TipoVehiculoId
         PRINT 'Entrada registrada.'
@@ -124,6 +116,22 @@ BEGIN
     END
 END
 
+--le pasa el codigo donde sea que pasa este codigo
+
+CREATE TRIGGER asignarCodeAll
+ON ingreso_auto
+AFTER INSERT
+AS
+BEGIN
+	INSERT INTO tipo_vehiculos(Codigo)
+	SELECT Codigo
+	FROM inserted
+
+	INSERT INTO montoPagarCar(Codigo)
+	SELECT Codigo
+	FROM inserted
+END
+
 
 
 
@@ -137,7 +145,7 @@ BEGIN
 	DECLARE @TotalDisponibles INT
 
 	SELECT @Ocupados = Ocupados
-	FROM Estacionamiento
+	FROM Estacionamientos
 	WHERE TipoVehiculoId = @TipoVehiculoId
 	
 	SELECT @Code = Codigo
@@ -145,12 +153,12 @@ BEGIN
 	WHERE Codigo = @Code
 
 	SELECT @TotalDisponibles = TotalDisponibles
-	FROM Estacionamiento
+	FROM Estacionamientos
 	WHERE TipoVehiculoId = @TipoVehiculoId
 
     IF EXISTS (
         SELECT 1 
-        FROM Estacionamiento 
+        FROM Estacionamientos 
         WHERE TipoVehiculoId = @TipoVehiculoId AND TotalDisponibles > Ocupados
     )
     BEGIN
@@ -165,15 +173,25 @@ BEGIN
 			IF @Code = @Code
 			BEGIN
 
-				UPDATE Estacionamiento
+				UPDATE Estacionamientos
 				SET Ocupados = Ocupados - 1
 				WHERE TipoVehiculoId = @TipoVehiculoId
 				PRINT 'Salida registrada.'
 
+
+				DELETE FROM montoPagarCar
+				WHERE Codigo = @Code
+
+				DELETE FROM tipo_vehiculos
+				WHERE Codigo = @Code
+
+				--esta es la tabla del trigger, esta se debe borrar de ultimo, ya que da error, porque los datos
+				--almacenados por el trigger, se deber borrar primero
 				DELETE FROM ingreso_auto
 				WHERE Codigo = @Code
 
-				IF @Ocupados > @TotalDisponibles
+
+				IF @Ocupados = @TotalDisponibles
 				BEGIN
 
 					PRINT 'No hay mas espacios disponibles para este tipo de vehiculo'
@@ -197,14 +215,9 @@ BEGIN
 END
 
 
+delete from tipo_vehiculos where Codigo IS NOT NULL
 
-
-
-
-
-
-
-
+delete from montoPagarCar where Codigo IS NOT NULL
 
 delete from ingreso_auto
 
@@ -214,15 +227,23 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 
 select * from ingreso_auto
 
-exec RegistrarSalida @Code = 81552037, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
--- se desocupa un parqueo
+--PENDIENTE
+exec RegistrarSalida @Code = 96219480, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
+-- se desocupa un parqueo de igual manera
 
-UPDATE Estacionamiento SET Ocupados = 0
+UPDATE Estacionamientos SET Ocupados = 0
+
 
 
 --ahora falta la parte que el administrador pueda tener una vista completa y el tema de los precios
 
 
-
+--PENDIENTE: en tipo vehiculo al no ponerse codigo, no me deja visualizar, voy a intentar hacerlo independiente dentro
+--de la misma vista
 CREATE VIEW vista_administrador
+AS
+SELECT ingreso_auto.Codigo, ingreso_auto.hora_entrada, montoPagarCar.Precio
+FROM ingreso_auto
+INNER JOIN montoPagarCar on ingreso_auto.Codigo = montoPagarCar.Codigo
 
+select * from vista_administrador
