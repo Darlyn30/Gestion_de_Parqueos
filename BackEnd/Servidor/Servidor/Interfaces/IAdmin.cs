@@ -1,7 +1,11 @@
-﻿namespace Servidor.Interfaces
+﻿using Servidor.Models;
+
+namespace Servidor.Interfaces
 {
     public interface IAdmin
     {
-        List<>
+        List<Cuenta> GetCuentas();
+        void Set(Cuenta model);
+        
     }
 }

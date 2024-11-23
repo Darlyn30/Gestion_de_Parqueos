@@ -1,8 +1,12 @@
-﻿namespace Servidor.Interfaces
+﻿using Servidor.Models;
+
+namespace Servidor.Interfaces
 {
     public interface Irepository<T>
     {
         List<T> GetAll();
-        void Add(T item);
+        Task<List<IngresoAuto>> SP_register(int id);
+        Task<List<IngresoAuto>> SP_eliminarRegister(string code, int id);
+
     }
 }

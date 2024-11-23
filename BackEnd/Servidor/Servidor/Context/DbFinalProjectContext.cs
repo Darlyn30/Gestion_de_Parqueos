@@ -1,5 +1,7 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Reflection.Metadata;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Servidor.Models;
 
 namespace Servidor.Context
@@ -13,12 +15,20 @@ namespace Servidor.Context
 
         public DbSet<IngresoAuto> ingreso_auto { get; set; }
 
+        
+
         public async Task<List<IngresoAuto>> ingresarVehiculo(int tipoVehiculo)
         {
             var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
 
             // Llama al procedimiento almacenado con FromSqlRaw
             return await ingreso_auto.FromSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam).ToListAsync();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IngresoAuto>()
+                .ToTable(tb => tb.HasTrigger("asignarCodeAll"));
         }
 
         public async Task<List<IngresoAuto>> BorrarVehiculo(int tipoVehiculo, string code)
