@@ -6,6 +6,6 @@ namespace Servidor.Models
     {
         [Key]
         public string Codigo { get; set; }
-        public DateTime HoraEntrada {  get; set; }
+        public DateTime hora_entrada {  get; set; }
     }
 }

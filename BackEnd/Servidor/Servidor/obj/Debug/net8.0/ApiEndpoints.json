@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "Servidor.Controllers.IngresoAutoController",
+    "Method": "GetIngresos",
+    "RelativePath": "api/IngresoAuto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.IngresoAutoController",
     "Method": "register",
     "RelativePath": "api/IngresoAuto",
     "HttpMethod": "POST",
@@ -91,16 +101,6 @@
     ]
   },
   {
-    "ContainingType": "Servidor.Controllers.MontoPagarController",
-    "Method": "Get",
-    "RelativePath": "api/MontoPagar",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Servidor.Controllers.RegistroVistaAdminController",
     "Method": "getInfo",
     "RelativePath": "api/RegistroVistaAdmin",
@@ -111,9 +111,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Servidor.Controllers.VerDisponibilidadController",
-    "Method": "Get",
-    "RelativePath": "api/VerDisponibilidad",
+    "ContainingType": "Servidor.Controllers.VistaDisponibilidadController",
+    "Method": "GetDisponibilad",
+    "RelativePath": "api/VistaDisponibilidad",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

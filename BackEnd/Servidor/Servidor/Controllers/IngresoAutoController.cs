@@ -16,6 +16,14 @@ namespace Servidor.Controllers
             this.oRepository = oRepository;
         }
 
+        [HttpGet]
+
+        public IActionResult GetIngresos()
+        {
+            var result = oRepository.GetAll();
+            return Ok(result);
+        }
+
         [HttpPost]
 
         public void register(int id)

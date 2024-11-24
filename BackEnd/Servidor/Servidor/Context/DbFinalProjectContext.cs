@@ -25,24 +25,17 @@ namespace Servidor.Context
             return await ingreso_auto.FromSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam).ToListAsync();
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<IngresoAuto>()
-                .ToTable(tb => tb.HasTrigger("asignarCodeAll"));
-        }
-
         public async Task<List<IngresoAuto>> BorrarVehiculo(int tipoVehiculo, string code)
         {
             var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
             var codigo = new SqlParameter("@Code", code);
 
             // Llama al procedimiento almacenado con FromSqlRaw
-            return await ingreso_auto.FromSqlRaw("EXEC RegistrarSalida @Code", codigo, "@TipoVehiculoId", tipoParam).ToListAsync();
+            return await ingreso_auto.FromSqlRaw($"EXEC RegistrarSalida @Code = @Code, @TipoVehiculoId = @TipoVehiculoId", codigo, tipoParam).ToListAsync();
         }
 
         public DbSet<TipoAuto> tipo_vehiculos {  get; set; }
 
         public DbSet<Estacionamientos> Estacionamientos { get; set; }
-        public DbSet<MontoPagar> montoPagarCar {  get; set; }
     }
 }

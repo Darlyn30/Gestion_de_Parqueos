@@ -59,6 +59,16 @@
       }
     },
     "/api/IngresoAuto": {
+      "get": {
+        "tags": [
+          "IngresoAuto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "IngresoAuto"
@@ -107,18 +117,6 @@
         }
       }
     },
-    "/api/MontoPagar": {
-      "get": {
-        "tags": [
-          "MontoPagar"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/RegistroVistaAdmin": {
       "get": {
         "tags": [
@@ -131,10 +129,10 @@
         }
       }
     },
-    "/api/VerDisponibilidad": {
+    "/api/VistaDisponibilidad": {
       "get": {
         "tags": [
-          "VerDisponibilidad"
+          "VistaDisponibilidad"
         ],
         "responses": {
           "200": {
