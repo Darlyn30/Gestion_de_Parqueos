@@ -47,7 +47,17 @@ CREATE table montoPagarCar
 --esta vista es para que el administrador tenga todos los registros de los ingresos y fechas de los vehiculos que han sido registrados
 --En lugar de crear una tabla para guardar todo, mejor creare una vista para el administrador
 
-
+CREATE TABLE RegistroVistaAdmin
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Codigo varchar(8),
+	TipoVehiculoId INT,
+	EstacionamientoId INT,
+	MontoPagarId INT,
+	FOREIGN KEY(TipoVehiculoId) REFERENCES tipo_vehiculos(Id),
+	FOREIGN KEY(EstacionamientoId) REFERENCES Estacionamientos(Id),
+	FOREIGN KEY (MontoPagarId) REFERENCES montoPagarCar(Id)
+)
 
 
 
