@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#Inicio" class="active">Inicio</a>
+        <a href="#Disponibilidad">Disponibilidad</a>
+        <a href="#Tarifas">Calcular Tarifas</a>
+        <a href="#VehiculosEnParqueo">Vehiculos En El Parqueo</a>
+        <a href="#RegistroGeneral">Registro General</a>
+    </div>
+
+    <div class="content">
+        <div class="home">
+            
+            <h1 class="W"></h1>
+        </div>
+        <div class="disponibilidad" style="display: none;">
+            <!-- RECIBIRA DATOS DESDE EL JS DE FORMA DINAMICA -->
+            <h1 class="disp">Disponibilidad</h1>
+            <!-- Este h1 -->
+
+            <Table border="1" id="crudTable">
+                <thead>
+
+                    <th>Tipo de Parqueo</th>
+                    <th>Total Disponibles</th>
+                    <th>Total Ocupados</th>
+                    <th>Precio por hora</th>
+                </thead>
+                <tbody>
+                    <!-- LOS VALORES VENDRAN DE FORMA DINAMICA -->
+                </tbody>
+            </Table>
+        </div>
+
+        <div class="tarifas" style="display: none;">
+            <h1 class="disp">Calculadora de Tarifas</h1>
+            <!-- LOGICA: HACER COMO UN CALCULO DE TARIFA COMO EN LA APP DE DJ PACK
+             CALCULAR LA LIBRA Y ESA WEA
+            -->
+        </div>
+
+        <div class="vehiculosParqueo" style="display: none;">
+            <h1 class="disp">Vehiculos en el Parqueo(Actualmente)</h1>
+            <!-- AQUI SE AGREGARA UNA VISTA EN SQL PARA ESTO -->
+        </div>
+    </div>
+
+    <div class="general" style="display: none;">
+        <h1 class="disp">Vista general</h1>
+        <!-- AQUI HABRA UNA ENTIDAD QUE SE GUARDA EN EL REGISTRO DEL ADMINISTRADOR,
+        TENDRA TODO DE FORMA GENERAL, PLANEO HACERLO CON UN COMBOBOX
+        1mes, 3 meses y un anio -->
+    </div>
+
+
+    <script src="./Main.js"></script>
+</body>
+</html>

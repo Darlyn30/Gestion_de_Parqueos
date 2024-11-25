@@ -7,9 +7,12 @@ create table cuentas
 (
 	Correo varchar(255),
 	Clave varchar(30),
+	Nombre varchar(10),
 	primary key(Correo)
 	
 )
+
+
 
 create table ingreso_auto
 (
@@ -197,7 +200,7 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = 68348207, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
+exec RegistrarSalida @Code = 69170869, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
 -- se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0
