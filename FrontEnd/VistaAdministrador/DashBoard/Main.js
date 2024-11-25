@@ -2,48 +2,248 @@ const URL_API = "https://localhost:7058/api/Cuenta";
 
 const h1 = document.querySelector(".W");
 
-//en el Home
-fetch(URL_API) //esto es para el tema del nombre y eso
-.then(res => res.json())
-.then(data => {
-    for(let i = 0; i < data.length; i++){
+const sideBarLinks = document.querySelectorAll('.sidebar a');
 
-        h1.innerHTML = `Bienvenido, ${data[i].nombre}`
-    }
+const divs = {
+    home: document.querySelector(".home"),
+    disponibilidad: document.querySelector(".disponibilidad"),
+    tarifas: document.querySelector(".tarifas"),
+    vehiculosParqueo: document.querySelector(".vehiculosParqueo"),
+    general: document.querySelector(".general"),
+
+}
+
+const imgs = {
+    car: document.querySelector(".carro"),
+    moto: document.querySelector(".motor"),
+    trailer: document.querySelector(".camion"),
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    home();
 })
+
+
+
+// Función para ejecutar una acción segun el enlace clickeado
+
+function handleSectionClick(section){
+    switch (section) {
+        case 'Inicio':
+            console.log('Acción para la sección Inicio');
+            home();
+          break;
+        case 'Disponibilidad':
+            console.log('Acción para la sección Disponibilidad');
+            disponibilidad();
+            break;
+        case 'Calcular Tarifas':
+            console.log('Acción para Calcular Tarifas');
+            tarifas();
+            break;
+        case 'Vehiculos En El Parqueo':
+            console.log('Acción para Vehículos en el Parqueo');
+            vehiculosParqueo();
+            break;
+        case 'Registro General':
+            console.log('Acción para Registro General');
+            VistaGeneral();
+            break;
+    }
+}
+
+
+function home(){
+    //en el Home
+    divs.disponibilidad.style.display = "none";
+    divs.tarifas.style.display = "none";
+    divs.vehiculosParqueo.style.display = "none";
+    divs.general.style.display = "none";
+    divs.home.style.display = "block";
+
+
+    fetch(URL_API) //esto es para el tema del nombre y eso
+    .then(res => res.json())
+    .then(data => {
+        for(let i = 0; i < data.length; i++){
+
+            h1.innerHTML = `Bienvenido, ${data[i].nombre}`
+        }
+    })
+}
+
 
 const URL_API_VIEW_AVAILABLE_PARKING = "https://localhost:7058/api/VistaDisponibilidad";
 
-const tableBody = document.getElementById('crudTable').querySelector('tbody');
-const row = document.createElement('tr');
-let idCounter = 1;
 
-fetch(URL_API_VIEW_AVAILABLE_PARKING)
-.then(res => res.json())
-.then(data => {
-    for(let i = 0; i < data.length; i++){
-        const row = document.createElement("tr");
-        row.innerHTML = `
-        <td>${data[i].tipo}</td>
-        <td>${data[i].totalDisponibles}</td>
-        <td>${data[i].ocupados}</td>
-        <td>$ ${data[i].precio} /h</td>
-        `;
-        tableBody.appendChild(row);
-    }
+
+function disponibilidad(){
+
+    divs.tarifas.style.display = "none";
+    divs.vehiculosParqueo.style.display = "none";
+    divs.general.style.display = "none";
+    divs.home.style.display = "none";
+    divs.disponibilidad.style.display = "block";
+
+    const tableBody = document.getElementById('crudTable').querySelector('tbody');
+    const row = document.createElement('tr');
+
+    /**
+     * esto hace que el cuerpo de la tabla se reinicie cada vez que se ejecute,
+     * ya que es lo unico que debe mostrar, no debe agregar mas nada
+     */
+    tableBody.innerHTML = '';
     
-})
+    fetch(URL_API_VIEW_AVAILABLE_PARKING)
+    .then(res => res.json())
+    .then(data => {
+        for(let i = 0; i < data.length; i++){
+            const row = document.createElement("tr");
+            row.innerHTML = `
+            <td>${data[i].tipo}</td>
+            <td>${data[i].totalDisponibles}</td>
+            <td>${data[i].ocupados}</td>
+            <td>$ ${data[i].precio} /h</td>
+            `;
+            tableBody.appendChild(row);
+            
+        }
+    })
+}
+
+
+function tarifas(){
+
+    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+    
+    divs.disponibilidad.style.display = "none";
+    divs.vehiculosParqueo.style.display = "none";
+    divs.general.style.display = "none";
+    divs.home.style.display = "none";
+    divs.tarifas.style.display = "block";
+
+
+
+
+    // Obtener los valores seleccionados por el usuario
+    const vehicleType = document.getElementById('vehicleType').value;
+    const timeAmount = parseInt(document.getElementById('timeAmount').value);
+    const timeUnit = document.getElementById('timeUnit').value;
+
+    // Definir tarifas base según el tipo de vehículo y unidad de tiempo
+    let hourlyRate, minuteRate;
+
+    switch(vehicleType) {
+        case 'car':
+            hourlyRate = 10; // 5 unidades de moneda por hora para coches
+            minuteRate = 0.08; // 0.08 unidades por minuto
+            break;
+        case 'motorcycle':
+            hourlyRate = 20; // 3 unidades de moneda por hora para motocicletas
+            minuteRate = 0.05; // 0.05 unidades por minuto
+            break;
+        case 'truck':
+            hourlyRate = 30; // 8 unidades de moneda por hora para camiones
+            minuteRate = 0.13; // 0.13 unidades por minuto
+            break;
+        default:
+            hourlyRate = 0;
+            minuteRate = 0;
+            break;
+    }
+
+    let totalPrice;
+
+    // Realizar el cálculo según la unidad de tiempo seleccionada
+    if (timeUnit === 'hours') {
+        totalPrice = hourlyRate * timeAmount;
+    } else if (timeUnit === 'minutes') {
+        totalPrice = minuteRate * timeAmount;
+    }
+
+
+
+    const btnResultCalc = document.querySelector(".btnResultCalc").addEventListener("click", () => {
+        result(timeAmount, timeUnit, vehicleType, totalPrice);
+    })
+
+
+
+}
+
+function result(timeAmount, timeUnit, vehicleType, totalPrice){
+    // Mostrar el resultado en el div
+    const resultMessage = `El costo de ${timeAmount} ${timeUnit} de estacionamiento para un ${vehicleType} es: $${totalPrice.toFixed(2)}`;
+    document.getElementById('resultMessage').innerText = resultMessage;
+    
+    // Hacer visible el div con el resultado
+    document.getElementById('tariffResult').style.display = 'block';
+}
+
+function vehiculosParqueo(){
+
+    divs.disponibilidad.style.display = "none";
+    divs.tarifas.style.display = "none";
+    divs.general.style.display = "none";
+    divs.home.style.display = "none";
+    divs.vehiculosParqueo.style.display = "block";
+
+    const URL_API_VIEW_PARKING_NOW = "https://localhost:7058/api/IngresoAuto";
+    fetch(URL_API_VIEW_PARKING_NOW)
+    .then(response => response.json())
+    .then(data => {
+        const tbody = document.getElementById('tbodyVehiculos');
+        const noDataDiv = document.getElementById('noData');
+
+        // Limpiar la tabla antes de insertar nuevos datos
+        tbody.innerHTML = '';
+
+        if (data.length === 0) {
+            // Si no hay vehículos, mostrar el mensaje
+            noDataDiv.style.display = 'block';
+        } else {
+            // Si hay vehículos, ocultar el mensaje de no datos
+            noDataDiv.style.display = 'none';
+
+            // Recorrer los vehículos y agregar las filas a la tabla
+            data.forEach(vehiculo => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${vehiculo.codigo}</td>
+                    <td>${new Date(vehiculo.hora_entrada).toLocaleString()}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+    })
+}
+
+function VistaGeneral(){
+    
+    divs.disponibilidad.style.display = "none";
+    divs.tarifas.style.display = "none";
+    divs.vehiculosParqueo.style.display = "none";
+    divs.home.style.display = "none";
+    divs.general.style.display = "block";
+}
+
 
 //SIDEBAR ACTIVE METHOD
-const sidebarLinks = document.querySelectorAll('.sidebar a');
+
 
 // Agrega un evento de clic a cada enlace
-sidebarLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    // Elimina la clase 'active' de todos los enlaces
-    sidebarLinks.forEach(l => l.classList.remove('active'));
+sideBarLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();  // Evitar que el enlace realice su accion predeterminada (navegar)
 
-    // Agrega la clase 'active' al enlace clicado
-    link.classList.add('active');
-  });
+        // Remover la clase 'active' de todos los enlaces
+        sideBarLinks.forEach(l => l.classList.remove('active'));
+
+        // Agregar la clase 'active' al enlace clickeado
+        link.classList.add('active');
+
+        // Llamar a la funcion handleSectionClick con el texto del enlace
+        handleSectionClick(link.textContent);
+    });
 });

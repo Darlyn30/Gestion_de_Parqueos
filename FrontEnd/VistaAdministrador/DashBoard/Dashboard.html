@@ -40,6 +40,7 @@
                     <!-- LOS VALORES VENDRAN DE FORMA DINAMICA -->
                 </tbody>
             </Table>
+
         </div>
 
         <div class="tarifas" style="display: none;">
@@ -47,16 +48,63 @@
             <!-- LOGICA: HACER COMO UN CALCULO DE TARIFA COMO EN LA APP DE DJ PACK
              CALCULAR LA LIBRA Y ESA WEA
             -->
+
+            <form id="tarifasForm">
+                <div class="form-group">
+                    <label for="vehicleType">Tipo de Vehículo:</label>
+                    <select id="vehicleType" name="vehicleType" required>
+                        <option value="car">Coche</option>
+                        <option value="motorcycle">Motocicleta</option>
+                        <option value="truck">Camión</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="timeAmount">Cantidad de tiempo:</label>
+                    <input type="number" id="timeAmount" name="timeAmount" min="1" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="timeUnit">Unidad de tiempo:</label>
+                    <select id="timeUnit" name="timeUnit" required>
+                        <option value="hours">Horas</option>
+                        <option value="minutes">Minutos</option>
+                    </select>
+                </div>
+        
+            </form>
+            <button type="button" class="btnResultCalc">Calcular</button>
+        
+            <div id="tariffResult" style="display: none;">
+                <h3>Resultado del Cálculo:</h3>
+                <p id="resultMessage"></p>
+            </div>
+
         </div>
 
         <div class="vehiculosParqueo" style="display: none;">
             <h1 class="disp">Vehiculos en el Parqueo(Actualmente)</h1>
             <!-- AQUI SE AGREGARA UNA VISTA EN SQL PARA ESTO -->
+
+            <table id="tablaVehiculos">
+                <thead>
+                    <tr>
+                        <th>ID Vehículo</th>
+                        <th>Hora de Ingreso</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="tbodyVehiculos">
+                    <!-- Los datos de los vehículos se agregarán aquí -->
+                </tbody>
+            </table>
+    
+            <div id="noData" class="no-data" style="display: none;">No hay vehículos parqueado
         </div>
     </div>
 
     <div class="general" style="display: none;">
-        <h1 class="disp">Vista general</h1>
+        <h1 class="disp">Registro general</h1>
         <!-- AQUI HABRA UNA ENTIDAD QUE SE GUARDA EN EL REGISTRO DEL ADMINISTRADOR,
         TENDRA TODO DE FORMA GENERAL, PLANEO HACERLO CON UN COMBOBOX
         1mes, 3 meses y un anio -->

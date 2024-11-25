@@ -200,7 +200,7 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = 69170869, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
+exec RegistrarSalida @Code = 83666866, @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que no esta en el registro
 -- se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0
@@ -209,6 +209,3 @@ UPDATE Estacionamientos SET Ocupados = 0
 
 --ahora falta la parte que el administrador pueda tener una vista completa y el tema de los precios
 
-
---PENDIENTE: en tipo vehiculo al no ponerse codigo, no me deja visualizar, voy a intentar hacerlo independiente dentro
---de la misma vista
