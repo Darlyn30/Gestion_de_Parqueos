@@ -8,5 +8,7 @@ namespace Servidor.Interfaces
         Task<List<IngresoAuto>> SP_register(int id);
         Task<List<IngresoAuto>> SP_eliminarRegister(string code, int id);
 
+        string saveLogTxt();
+
     }
 }

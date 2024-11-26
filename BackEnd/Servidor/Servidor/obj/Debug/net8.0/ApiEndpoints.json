@@ -101,6 +101,16 @@
     ]
   },
   {
+    "ContainingType": "Servidor.Controllers.LogMessageController",
+    "Method": "Get",
+    "RelativePath": "api/LogMessage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Servidor.Controllers.RegistroVistaAdminController",
     "Method": "getInfo",
     "RelativePath": "api/RegistroVistaAdmin",

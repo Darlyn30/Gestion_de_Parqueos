@@ -38,5 +38,27 @@ namespace Servidor.Services
             return await _context.BorrarVehiculo(id, code);
             
         }
+
+        public string saveLogTxt()
+        {
+            string path = "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Log.txt";
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var item in _context.LogMessages)
+                    {
+                        sw.WriteLine($"{item.Id} {item.Mensaje} {item.FechaMensaje}");
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return "Txt Enviado Correctamente";
+        }
     }
 }

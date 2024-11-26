@@ -89,3 +89,4 @@ C:\Users\Admin\Videos\ProyectosJS\proyecto-final-prog2\BackEnd\Servidor\Servidor
 C:\Users\Admin\Videos\ProyectosJS\proyecto-final-prog2\BackEnd\Servidor\Servidor\obj\Debug\net8.0\Servidor.pdb
 C:\Users\Admin\Videos\ProyectosJS\proyecto-final-prog2\BackEnd\Servidor\Servidor\obj\Debug\net8.0\Servidor.genruntimeconfig.cache
 C:\Users\Admin\Videos\ProyectosJS\proyecto-final-prog2\BackEnd\Servidor\Servidor\obj\Debug\net8.0\ref\Servidor.dll
+C:\Users\Admin\Videos\ProyectosJS\proyecto-final-prog2\BackEnd\Servidor\Servidor\bin\Debug\net8.0\Newtonsoft.Json.dll

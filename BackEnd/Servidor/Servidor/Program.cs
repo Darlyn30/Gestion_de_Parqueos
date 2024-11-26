@@ -19,7 +19,6 @@ builder.Services.AddDbContext<DbFinalProjectContext>(x => x.UseSqlServer(conn));
 builder.Services.AddDbContext<RegistroVistaAdminContext>(x => x.UseSqlServer(conn));
 builder.Services.AddDbContext<VistaDisponibilidadContext>(x => x.UseSqlServer(conn));
 
-
 builder.Services.AddScoped<IVistaDisponibilidad, VistaDisponibilidadService>();
 builder.Services.AddScoped<IAdmin, AdminService>();
 builder.Services.AddScoped(typeof(Irepository<>), typeof(RepositoryService<>));

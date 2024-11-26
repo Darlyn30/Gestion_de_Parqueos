@@ -55,6 +55,15 @@ CREATE TABLE RegistroVistaAdminss
 	FOREIGN KEY(EstacionamientoId) REFERENCES Estacionamientos(Id)
 )
 
+--CREAMOS UN TIPO DE LOG JEJE, Estos Logs Lo imprimeros en EF
+
+CREATE TABLE LogMessages
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Mensaje VARCHAR(255),
+	FechaMensaje DATETIME,
+)
+
 -- Tipos de vehículos
 INSERT INTO tipo_vehiculos (Tipo) VALUES 
 ('Automovil'),
@@ -81,7 +90,7 @@ INNER JOIN Estacionamientos on tipo_vehiculos.Id = Estacionamientos.TipoVehiculo
 
 
 
-CREATE PROCEDURE RegistrarEntrada
+ALTER PROCEDURE RegistrarEntrada
     @TipoVehiculoId INT
 AS
 BEGIN
@@ -95,6 +104,7 @@ BEGIN
         UPDATE Estacionamientos
         SET Ocupados = Ocupados + 1
         WHERE TipoVehiculoId = @TipoVehiculoId
+		INSERT INTO LogMessages(Mensaje, FechaMensaje) values ('Entrada registrada.', GETDATE())
         PRINT 'Entrada registrada.'
 
 
@@ -111,6 +121,7 @@ BEGIN
     END
     ELSE
     BEGIN
+		INSERT INTO LogMessages(Mensaje, FechaMensaje) values ('No hay espacios disponibles para este tipo de vehículo.', GETDATE())
         PRINT 'No hay espacios disponibles para este tipo de vehículo.'
     END
 END
@@ -164,7 +175,8 @@ BEGIN
 
 		IF @Ocupados = 0
 		BEGIN
-			print 'No hay vehiculos en el parqueo'
+			INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('No hay vehiculos en el parqueo', GETDATE())
+			PRINT 'No hay vehiculos en el parqueo'
 		END
 		ELSE
 		BEGIN
@@ -216,6 +228,8 @@ BEGIN
 				END
 
 				-- Devolver el costo total
+				INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('Minutos Totales: ' + CAST(@MinutosTotales AS VARCHAR(10)), GETDATE())
+				INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('Costo Total: ' + CAST(@CostoTotal AS VARCHAR(10)), GETDATE())
 				PRINT 'Minutos Totales: ' + CAST(@MinutosTotales AS VARCHAR(10))
 				PRINT 'Costo Total: ' + CAST(@CostoTotal AS VARCHAR(10))
 
@@ -226,7 +240,8 @@ BEGIN
 				UPDATE Estacionamientos
 				SET Ocupados = Ocupados - 1
 				WHERE TipoVehiculoId = @TipoVehiculoId
-				PRINT 'Salida registrada.'
+				INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('Salida registrada.', GETDATE())
+				PRINT'Salida registrada.'
 
 				DELETE FROM ingreso_auto
 				WHERE Codigo = @Code
@@ -235,12 +250,15 @@ BEGIN
 				IF @Ocupados = @TotalDisponibles
 				BEGIN
 
+					INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('No hay mas espacios disponibles para este tipo de vehiculo', GETDATE())
 					PRINT 'No hay mas espacios disponibles para este tipo de vehiculo'
 
 				END
 			END
 			ELSE
 			BEGIN
+				--Esto esta BUG, no ha sido resuelto, 
+				INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('No se encontro el Vehiculo o No esta registrado, Por favor Revise el codigo', GETDATE())
 				PRINT 'No se encontro el Vehiculo o No esta registrado, Por favor Revise el codigo'
 			END
 
@@ -251,12 +269,14 @@ BEGIN
     END
     ELSE
     BEGIN
-        PRINT 'No hay reservas para esta tipo de vehiculo.'
+		--Esto esta BUG, no ha sido resuelto, 
+        INSERT INTO LogMessages(Mensaje, FechaMensaje) VALUES('No hay reservas para esta tipo de vehiculo.', GETDATE())
+		PRINT 'No hay reservas para esta tipo de vehiculo.'
     END
 END
 
 
-
+select * from ver_disponibilidad
 
 delete from ingreso_auto
 
@@ -266,10 +286,12 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = '94321390', @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que 
+exec RegistrarSalida @Code = '04882295', @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que 
 --no esta en el registro se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0
+
+SELECT * FROM LogMessages
 
 
 

@@ -117,6 +117,18 @@
         }
       }
     },
+    "/api/LogMessage": {
+      "get": {
+        "tags": [
+          "LogMessage"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/RegistroVistaAdmin": {
       "get": {
         "tags": [

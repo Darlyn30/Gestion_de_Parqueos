@@ -37,5 +37,6 @@ namespace Servidor.Context
         public DbSet<TipoAuto> tipo_vehiculos {  get; set; }
 
         public DbSet<Estacionamientos> Estacionamientos { get; set; }
+        public DbSet<LogsMessages> LogMessages { get; set; }
     }
 }
