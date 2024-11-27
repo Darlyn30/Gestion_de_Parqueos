@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Servidor.Controllers.CalcularTarifaController",
+    "Method": "GetCalculo",
+    "RelativePath": "api/CalcularTarifa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "formato",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cantidad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Servidor.Controllers.CuentaController",
     "Method": "GetCuentas",
     "RelativePath": "api/Cuenta",
@@ -114,6 +140,16 @@
     "ContainingType": "Servidor.Controllers.RegistroVistaAdminController",
     "Method": "getInfo",
     "RelativePath": "api/RegistroVistaAdmin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.TipoVehiculoController",
+    "Method": "GetTipoVehiculo",
+    "RelativePath": "api/TipoVehiculo",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

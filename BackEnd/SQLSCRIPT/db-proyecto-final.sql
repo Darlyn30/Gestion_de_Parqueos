@@ -21,6 +21,8 @@ create table ingreso_auto
 	
 )
 
+ALTER TABLE ingreso_auto ADD TipoVehiculo VARCHAR(50)
+
 create table tipo_vehiculos
 (
 	Id int identity(1,1) primary key,
@@ -64,6 +66,7 @@ CREATE TABLE LogMessages
 	FechaMensaje DATETIME,
 )
 
+
 -- Tipos de vehículos
 INSERT INTO tipo_vehiculos (Tipo) VALUES 
 ('Automovil'),
@@ -94,6 +97,10 @@ ALTER PROCEDURE RegistrarEntrada
     @TipoVehiculoId INT
 AS
 BEGIN
+	DECLARE @TipoVehiculo VARCHAR(50)
+
+
+
     IF EXISTS (
         SELECT 1 
         FROM Estacionamientos 
@@ -107,6 +114,9 @@ BEGIN
 		INSERT INTO LogMessages(Mensaje, FechaMensaje) values ('Entrada registrada.', GETDATE())
         PRINT 'Entrada registrada.'
 
+		SELECT @TipoVehiculo = Tipo
+		FROM tipo_vehiculos
+		WHERE Id = @TipoVehiculoId
 
 		INSERT INTO ingreso_auto
 		VALUES (SUBSTRING(CONCAT(FLOOR(RAND() * 10), 
@@ -117,7 +127,9 @@ BEGIN
                  FLOOR(RAND() * 10), 
                  FLOOR(RAND() * 10), 
                  FLOOR(RAND() * 10)), 1, 8),
-				 GETDATE())
+				 GETDATE(), @TipoVehiculo)
+
+		
     END
     ELSE
     BEGIN
@@ -132,7 +144,8 @@ END
 
 
 
-ALTER PROCEDURE RegistrarSalida 
+ALTER PROCEDURE RegistrarSalida
+	@CostoTotal DECIMAL(10,2) = 0, -- Declarar la variable para el costo total
 	@HoraEntrada DATETIME = NULL,
     @HoraSalida DATETIME = NULL, -- Permitimos que sea NULL para asignar GETDATE() dentro del procedimiento
     @PrecioHora DECIMAL(10, 2) = NULL,
@@ -209,8 +222,7 @@ BEGIN
 				DECLARE @MinutosTotales INT
 				SET @MinutosTotales = DATEDIFF(MINUTE, @HoraEntrada, @HoraSalida)
 
-				-- Declarar la variable para el costo total
-				DECLARE @CostoTotal DECIMAL(10, 2) = 0
+				
 
 				-- Verificar las reglas de costo
 				IF @MinutosTotales <= 15
@@ -225,6 +237,9 @@ BEGIN
 
 					-- Calcular el costo total
 					SET @CostoTotal = @HorasCobradas * @PrecioHora
+
+
+					
 				END
 
 				-- Devolver el costo total
@@ -276,6 +291,7 @@ BEGIN
 END
 
 
+
 select * from ver_disponibilidad
 
 delete from ingreso_auto
@@ -286,13 +302,24 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = '04882295', @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que 
+exec RegistrarSalida @Code = '55187165', @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que 
 --no esta en el registro se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0
 
 SELECT * FROM LogMessages
 
+DELETE FROM LogMessages
+
+
+
 
 
 --ahora falta la parte que el administrador pueda tener una vista completa y el tema de los precios
+
+
+
+
+
+
+

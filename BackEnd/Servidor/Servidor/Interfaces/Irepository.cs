@@ -10,5 +10,7 @@ namespace Servidor.Interfaces
 
         string saveLogTxt();
 
+        
+
     }
 }

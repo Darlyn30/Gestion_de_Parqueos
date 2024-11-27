@@ -1,4 +1,3 @@
-const URL_API = "https://localhost:7058/api/Cuenta";
 
 const h1 = document.querySelector(".W");
 
@@ -19,6 +18,7 @@ const imgs = {
     trailer: document.querySelector(".camion"),
 }
 
+const btnResultCalc = document.querySelector(".btnResultCalc");
 
 document.addEventListener("DOMContentLoaded", () => {
     home();
@@ -56,6 +56,8 @@ function handleSectionClick(section){
 
 function home(){
     //en el Home
+    const URL_API = "https://localhost:7058/api/Cuenta";
+
     divs.disponibilidad.style.display = "none";
     divs.tarifas.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
@@ -74,11 +76,11 @@ function home(){
 }
 
 
-const URL_API_VIEW_AVAILABLE_PARKING = "https://localhost:7058/api/VistaDisponibilidad";
 
 
 
 function disponibilidad(){
+    const URL_API_VIEW_AVAILABLE_PARKING = "https://localhost:7058/api/VistaDisponibilidad";
 
     divs.tarifas.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
@@ -114,9 +116,6 @@ function disponibilidad(){
 
 
 function tarifas(){
-
-    event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
-    
     divs.disponibilidad.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
     divs.general.style.display = "none";
@@ -124,57 +123,35 @@ function tarifas(){
     divs.tarifas.style.display = "block";
 
 
+    btnResultCalc.addEventListener("click", async () => {
 
 
-    // Obtener los valores seleccionados por el usuario
-    const vehicleType = document.getElementById('vehicleType').value;
-    const timeAmount = parseInt(document.getElementById('timeAmount').value);
-    const timeUnit = document.getElementById('timeUnit').value;
-
-    // Definir tarifas base según el tipo de vehículo y unidad de tiempo
-    let hourlyRate, minuteRate;
-
-    switch(vehicleType) {
-        case 'car':
-            hourlyRate = 10; // 5 unidades de moneda por hora para coches
-            minuteRate = 0.08; // 0.08 unidades por minuto
-            break;
-        case 'motorcycle':
-            hourlyRate = 20; // 3 unidades de moneda por hora para motocicletas
-            minuteRate = 0.05; // 0.05 unidades por minuto
-            break;
-        case 'truck':
-            hourlyRate = 30; // 8 unidades de moneda por hora para camiones
-            minuteRate = 0.13; // 0.13 unidades por minuto
-            break;
-        default:
-            hourlyRate = 0;
-            minuteRate = 0;
-            break;
-    }
-
-    let totalPrice;
-
-    // Realizar el cálculo según la unidad de tiempo seleccionada
-    if (timeUnit === 'hours') {
-        totalPrice = hourlyRate * timeAmount;
-    } else if (timeUnit === 'minutes') {
-        totalPrice = minuteRate * timeAmount;
-    }
-
-
-
-    const btnResultCalc = document.querySelector(".btnResultCalc").addEventListener("click", () => {
-        result(timeAmount, timeUnit, vehicleType, totalPrice);
+        const vehicleType = document.getElementById('vehicleType').value;
+        const timeAmount = parseInt(document.getElementById('timeAmount').value);
+        const timeUnit = document.getElementById('timeUnit').value;
+    
+        const URL_API_CALC_TARIFA = `https://localhost:7058/api/CalcularTarifa?vehiculoId=${vehicleType}&formato=${timeUnit}&cantidad=${timeAmount}`;
+    
+    
+        
+    
+        fetch(URL_API_CALC_TARIFA, {
+            method: 'GET',
+        })
+        .then(res => res.json())
+        .then(data => {
+            result(timeAmount, timeUnit, vehicleType, data);
+        })
+    
     })
-
-
-
 }
+
+
+
 
 function result(timeAmount, timeUnit, vehicleType, totalPrice){
     // Mostrar el resultado en el div
-    const resultMessage = `El costo de ${timeAmount} ${timeUnit} de estacionamiento para un ${vehicleType} es: $${totalPrice.toFixed(2)}`;
+    const resultMessage = `El costo de ${timeAmount} ${timeUnit} de estacionamiento para un ${vehicleType} es: ${totalPrice}`;
     document.getElementById('resultMessage').innerText = resultMessage;
     
     // Hacer visible el div con el resultado
@@ -190,6 +167,7 @@ function vehiculosParqueo(){
     divs.vehiculosParqueo.style.display = "block";
 
     const URL_API_VIEW_PARKING_NOW = "https://localhost:7058/api/IngresoAuto";
+
     fetch(URL_API_VIEW_PARKING_NOW)
     .then(response => response.json())
     .then(data => {
@@ -211,11 +189,16 @@ function vehiculosParqueo(){
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td>${vehiculo.codigo}</td>
+                    <td>${vehiculo.tipoVehiculo}</td>
                     <td>${new Date(vehiculo.hora_entrada).toLocaleString()}</td>
+                    <td>$</td>
                 `;
                 tbody.appendChild(tr);
+                
             });
+            
         }
+        
     })
 }
 

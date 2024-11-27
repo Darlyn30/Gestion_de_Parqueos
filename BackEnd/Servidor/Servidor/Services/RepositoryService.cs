@@ -28,7 +28,6 @@ namespace Servidor.Services
 
         public async Task<List<IngresoAuto>> SP_register(int id)
         {
-            
             return await _context.ingresarVehiculo(id);
             
         }
@@ -49,7 +48,7 @@ namespace Servidor.Services
                 {
                     foreach (var item in _context.LogMessages)
                     {
-                        sw.WriteLine($"{item.Id} {item.Mensaje} {item.FechaMensaje}");
+                        sw.WriteLine($"{item.Id}: {item.Mensaje}\n");
                     }
                 }
                 
@@ -60,5 +59,7 @@ namespace Servidor.Services
             }
             return "Txt Enviado Correctamente";
         }
+
+
     }
 }

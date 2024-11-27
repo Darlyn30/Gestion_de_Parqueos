@@ -7,5 +7,6 @@ namespace Servidor.Models
         [Key]
         public string Codigo { get; set; }
         public DateTime hora_entrada {  get; set; }
+        public string TipoVehiculo {  get; set; }
     }
 }

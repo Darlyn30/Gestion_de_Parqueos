@@ -7,19 +7,19 @@ namespace Servidor.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LogMessageController : ControllerBase
+    public class TipoVehiculoController : ControllerBase
     {
-        private readonly Irepository<LogsMessages> oRepository;
-        public LogMessageController(Irepository<LogsMessages> oRepository)
+        private readonly Irepository<TipoAuto> oRepository;
+        public TipoVehiculoController(Irepository<TipoAuto> oRepository)
         {
             this.oRepository = oRepository;
         }
 
         [HttpGet]
 
-        public IActionResult Get()
+        public IActionResult GetTipoVehiculo()
         {
-            var result = oRepository.saveLogTxt();
+            var result = oRepository.GetAll();
             return Ok(result);
         }
     }

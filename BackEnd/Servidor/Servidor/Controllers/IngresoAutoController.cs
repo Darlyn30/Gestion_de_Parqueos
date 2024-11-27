@@ -28,6 +28,7 @@ namespace Servidor.Controllers
 
         public void register(int id)
         {
+
             oRepository.SP_register(id);
             
         }

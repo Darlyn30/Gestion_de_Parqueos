@@ -26,11 +26,12 @@ namespace Servidor.Context
         }
 
         public async Task<List<IngresoAuto>> BorrarVehiculo(int tipoVehiculo, string code)
-        {
+        { 
+            
             var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
             var codigo = new SqlParameter("@Code", code);
 
-            // Llama al procedimiento almacenado con FromSqlRaw
+            
             return await ingreso_auto.FromSqlRaw($"EXEC RegistrarSalida @Code = @Code, @TipoVehiculoId = @TipoVehiculoId", codigo, tipoParam).ToListAsync();
         }
 

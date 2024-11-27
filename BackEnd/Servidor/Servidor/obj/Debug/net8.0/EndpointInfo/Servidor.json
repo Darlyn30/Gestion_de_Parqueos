@@ -5,6 +5,43 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/CalcularTarifa": {
+      "get": {
+        "tags": [
+          "CalcularTarifa"
+        ],
+        "parameters": [
+          {
+            "name": "vehiculoId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cantidad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cuenta": {
       "get": {
         "tags": [
@@ -133,6 +170,18 @@
       "get": {
         "tags": [
           "RegistroVistaAdmin"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TipoVehiculo": {
+      "get": {
+        "tags": [
+          "TipoVehiculo"
         ],
         "responses": {
           "200": {

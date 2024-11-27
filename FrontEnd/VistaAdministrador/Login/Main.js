@@ -8,12 +8,6 @@ const inputs = {
 const btnLog = document.querySelector("button");
 
 
-fetch(URL_API)
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-})
-
 function log(){
 
     fetch(URL_API)
