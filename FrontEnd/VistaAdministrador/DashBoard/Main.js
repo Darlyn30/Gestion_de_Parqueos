@@ -12,11 +12,6 @@ const divs = {
 
 }
 
-const imgs = {
-    car: document.querySelector(".carro"),
-    moto: document.querySelector(".motor"),
-    trailer: document.querySelector(".camion"),
-}
 
 const btnResultCalc = document.querySelector(".btnResultCalc");
 
@@ -50,6 +45,9 @@ function handleSectionClick(section){
             console.log('Acción para Registro General');
             VistaGeneral();
             break;
+        case 'Cerrar Sesion':
+            window.alert("Adios");
+            window.location = "../Login/Login.html";
     }
 }
 
@@ -133,14 +131,26 @@ function tarifas(){
         const URL_API_CALC_TARIFA = `https://localhost:7058/api/CalcularTarifa?vehiculoId=${vehicleType}&formato=${timeUnit}&cantidad=${timeAmount}`;
     
     
-        
+        let tipo;
+        switch(vehicleType){
+            case "1":
+                tipo = "Automovil";
+                break;
+            case "2":
+                tipo = "Motocicleta";
+                break;
+            case "3":
+                tipo = "Camion";
+                break;
+        }
+        console.log(vehicleType);
     
         fetch(URL_API_CALC_TARIFA, {
             method: 'GET',
         })
         .then(res => res.json())
         .then(data => {
-            result(timeAmount, timeUnit, vehicleType, data);
+            result(timeAmount, timeUnit, tipo, data);
         })
     
     })
@@ -151,7 +161,8 @@ function tarifas(){
 
 function result(timeAmount, timeUnit, vehicleType, totalPrice){
     // Mostrar el resultado en el div
-    const resultMessage = `El costo de ${timeAmount} ${timeUnit} de estacionamiento para un ${vehicleType} es: ${totalPrice}`;
+    
+    const resultMessage = `El costo de ${timeAmount} ${timeUnit} de estacionamiento para un tipo de vehiculo: ${vehicleType} es: ${totalPrice}`;
     document.getElementById('resultMessage').innerText = resultMessage;
     
     // Hacer visible el div con el resultado
@@ -168,6 +179,7 @@ function vehiculosParqueo(){
 
     const URL_API_VIEW_PARKING_NOW = "https://localhost:7058/api/IngresoAuto";
 
+    
     fetch(URL_API_VIEW_PARKING_NOW)
     .then(response => response.json())
     .then(data => {
@@ -184,16 +196,45 @@ function vehiculosParqueo(){
             // Si hay vehículos, ocultar el mensaje de no datos
             noDataDiv.style.display = 'none';
 
+
             // Recorrer los vehículos y agregar las filas a la tabla
             data.forEach(vehiculo => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
+                let vehicleType;
+
+                switch(vehiculo.tipoVehiculo){
+                    case "Automovil":
+                        vehicleType = 1;
+                        break;
+                    case "Motocicleta":
+                        vehicleType = 2;
+                        break;
+                    case "Camion":
+                        vehicleType = 3;
+                        break;
+                    default:
+                        "No se encontro este tipo de vehiculo";
+                        break;
+                }
+                const URL_API_MONTO = `https://localhost:7058/api/Monto?horaEntrada=${vehiculo.hora_entrada}&vehiculoId=${vehicleType}`
+                
+                fetch(URL_API_MONTO, {
+                    method: 'GET',
+                })
+                .then(resp => resp.json())
+                .then(monto => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
                     <td>${vehiculo.codigo}</td>
                     <td>${vehiculo.tipoVehiculo}</td>
                     <td>${new Date(vehiculo.hora_entrada).toLocaleString()}</td>
-                    <td>$</td>
-                `;
-                tbody.appendChild(tr);
+                    <td>$ ${monto}</td>
+                    `;
+                    tbody.appendChild(tr);
+                    
+
+                })
+
+                
                 
             });
             

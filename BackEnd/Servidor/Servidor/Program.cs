@@ -21,6 +21,7 @@ builder.Services.AddDbContext<RegistroVistaAdminContext>(x => x.UseSqlServer(con
 builder.Services.AddDbContext<VistaDisponibilidadContext>(x => x.UseSqlServer(conn));
 
 //services
+builder.Services.AddScoped<IVistaAdmin, RegistroVistaAdminService>();
 builder.Services.AddScoped<ITarifa, CalcularTarifaService>();
 builder.Services.AddScoped<IVistaDisponibilidad, VistaDisponibilidadService>();
 builder.Services.AddScoped<IAdmin, AdminService>();

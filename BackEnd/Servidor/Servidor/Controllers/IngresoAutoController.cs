@@ -35,7 +35,7 @@ namespace Servidor.Controllers
 
         [HttpDelete]
 
-        public void Delete(int id, string code)
+        public void Delete(string code, int id)
         {
             oRepository.SP_eliminarRegister(code, id);
         }

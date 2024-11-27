@@ -108,13 +108,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "code",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "code",
-        "Type": "System.String",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -134,6 +134,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.MontoController",
+    "Method": "GetMonto",
+    "RelativePath": "api/Monto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "horaEntrada",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
