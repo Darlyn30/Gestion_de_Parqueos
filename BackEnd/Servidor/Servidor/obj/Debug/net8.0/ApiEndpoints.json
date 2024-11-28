@@ -68,6 +68,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Servidor.Controllers.EstacionamientoSetController",
+    "Method": "Get",
+    "RelativePath": "api/EstacionamientoSet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Servidor.Controllers.IngresoAutoController",
     "Method": "GetIngresos",
     "RelativePath": "api/IngresoAuto",

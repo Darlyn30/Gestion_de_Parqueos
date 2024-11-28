@@ -95,6 +95,27 @@
         }
       }
     },
+    "/api/EstacionamientoSet": {
+      "get": {
+        "tags": [
+          "EstacionamientoSet"
+        ],
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/IngresoAuto": {
       "get": {
         "tags": [

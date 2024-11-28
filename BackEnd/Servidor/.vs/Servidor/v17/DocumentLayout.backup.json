@@ -3,20 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\context\\dbfinalprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\dbfinalprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\vistadisponibilidadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\vistadisponibilidadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\models\\jsonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\jsonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\estacionamientosetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\estacionamientosetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\ivistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\interfaces\\ivistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\itarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\interfaces\\itarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\montocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\montocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\estacionamientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\estacionamientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\repositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\repositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\models\\vistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\vistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\context\\vistadisponibilidadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\vistadisponibilidadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\context\\dbfinalprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\dbfinalprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\ingresoauto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\montocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\montocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\calculartarifaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\calculartarifaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\context\\registrovistaadmincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\registrovistaadmincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\itarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\interfaces\\itarifa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\calculartarifacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\vistadisponibilidadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\vistadisponibilidadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\estacionamientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\models\\vistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\vistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\tipovehiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\tipovehiculocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\models\\registrovistaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\models\\registrovistaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\ivistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\interfaces\\ivistadisponibilidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\ivistaadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,14 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\registrovistaadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\registrovistaadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\estacionamientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\estacionamientocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\context\\vistadisponibilidadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\vistadisponibilidadcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -138,148 +146,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DbFinalProjectContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\DbFinalProjectContext.cs",
-              "RelativeDocumentMoniker": "Servidor\\Context\\DbFinalProjectContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\DbFinalProjectContext.cs",
-              "RelativeToolTip": "Servidor\\Context\\DbFinalProjectContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBgAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "JsonResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\JsonResponse.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\JsonResponse.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\JsonResponse.cs",
+              "RelativeToolTip": "Servidor\\Models\\JsonResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:15:01.725Z",
+              "WhenOpened": "2024-11-28T06:47:27.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Program.cs",
-              "RelativeDocumentMoniker": "Servidor\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Program.cs",
-              "RelativeToolTip": "Servidor\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAABFAAAAAAAAAA==",
+              "Title": "EstacionamientoSetController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\EstacionamientoSetController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\EstacionamientoSetController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\EstacionamientoSetController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\EstacionamientoSetController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwBkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:53:26.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RepositoryService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
-              "RelativeDocumentMoniker": "Servidor\\Services\\RepositoryService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
-              "RelativeToolTip": "Servidor\\Services\\RepositoryService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwCQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:57:01.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IngresoAutoController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\IngresoAutoController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\IngresoAutoController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAADwvygAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:38:06.416Z",
+              "WhenOpened": "2024-11-28T03:37:48.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Irepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
-              "RelativeDocumentMoniker": "Servidor\\Interfaces\\Irepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
-              "RelativeToolTip": "Servidor\\Interfaces\\Irepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T10:56:17.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistroVistaAdminService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RegistroVistaAdminService.cs",
-              "RelativeDocumentMoniker": "Servidor\\Services\\RegistroVistaAdminService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RegistroVistaAdminService.cs",
-              "RelativeToolTip": "Servidor\\Services\\RegistroVistaAdminService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:26:19.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\appsettings.json",
-              "RelativeDocumentMoniker": "Servidor\\appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\appsettings.json",
-              "RelativeToolTip": "Servidor\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T10:59:12.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IngresoAuto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\IngresoAuto.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\IngresoAuto.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\IngresoAuto.cs",
-              "RelativeToolTip": "Servidor\\Models\\IngresoAuto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:06:23.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MontoController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\MontoController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\MontoController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\MontoController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\MontoController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAD4vxYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:06:04.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CalcularTarifaService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\CalcularTarifaService.cs",
-              "RelativeDocumentMoniker": "Servidor\\Services\\CalcularTarifaService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\CalcularTarifaService.cs",
-              "RelativeToolTip": "Servidor\\Services\\CalcularTarifaService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwD0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T23:41:51.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegistroVistaAdminContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\RegistroVistaAdminContext.cs",
-              "RelativeDocumentMoniker": "Servidor\\Context\\RegistroVistaAdminContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\RegistroVistaAdminContext.cs",
-              "RelativeToolTip": "Servidor\\Context\\RegistroVistaAdminContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:22:25.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "ITarifa.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\ITarifa.cs",
               "RelativeDocumentMoniker": "Servidor\\Interfaces\\ITarifa.cs",
@@ -291,223 +188,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CalcularTarifaController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CalcularTarifaController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\CalcularTarifaController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CalcularTarifaController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\CalcularTarifaController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T23:40:30.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LogMessageController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\LogMessageController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\LogMessageController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\LogMessageController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\LogMessageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T04:06:09.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\AdminService.cs",
-              "RelativeDocumentMoniker": "Servidor\\Services\\AdminService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\AdminService.cs",
-              "RelativeToolTip": "Servidor\\Services\\AdminService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:46:26.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "VistaDisponibilidadService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\VistaDisponibilidadService.cs",
-              "RelativeDocumentMoniker": "Servidor\\Services\\VistaDisponibilidadService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\VistaDisponibilidadService.cs",
-              "RelativeToolTip": "Servidor\\Services\\VistaDisponibilidadService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T10:59:01.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CuentaController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CuentaController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\CuentaController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CuentaController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\CuentaController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T08:31:45.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LogsMessages.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\LogsMessages.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\LogsMessages.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\LogsMessages.cs",
-              "RelativeToolTip": "Servidor\\Models\\LogsMessages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T03:07:22.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Cuenta.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Cuenta.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\Cuenta.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Cuenta.cs",
-              "RelativeToolTip": "Servidor\\Models\\Cuenta.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:03:47.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CuentaContext.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\CuentaContext.cs",
-              "RelativeDocumentMoniker": "Servidor\\Context\\CuentaContext.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\CuentaContext.cs",
-              "RelativeToolTip": "Servidor\\Context\\CuentaContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:02:05.224Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Estacionamientos.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Estacionamientos.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\Estacionamientos.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Estacionamientos.cs",
-              "RelativeToolTip": "Servidor\\Models\\Estacionamientos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:09:27.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "VistaDisponibilidad.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\VistaDisponibilidad.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\VistaDisponibilidad.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\VistaDisponibilidad.cs",
-              "RelativeToolTip": "Servidor\\Models\\VistaDisponibilidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T10:56:45.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "TipoVehiculoController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\TipoVehiculoController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\TipoVehiculoController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\TipoVehiculoController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\TipoVehiculoController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T10:04:56.057Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TipoAuto.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\TipoAuto.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\TipoAuto.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\TipoAuto.cs",
-              "RelativeToolTip": "Servidor\\Models\\TipoAuto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:07:36.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "RegistroVistaAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\RegistroVistaAdmin.cs",
-              "RelativeDocumentMoniker": "Servidor\\Models\\RegistroVistaAdmin.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\RegistroVistaAdmin.cs",
-              "RelativeToolTip": "Servidor\\Models\\RegistroVistaAdmin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:20:14.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 3,
               "Title": "IVistaDisponibilidad.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaDisponibilidad.cs",
               "RelativeDocumentMoniker": "Servidor\\Interfaces\\IVistaDisponibilidad.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaDisponibilidad.cs",
               "RelativeToolTip": "Servidor\\Interfaces\\IVistaDisponibilidad.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T10:56:24.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IVistaAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaAdmin.cs",
-              "RelativeDocumentMoniker": "Servidor\\Interfaces\\IVistaAdmin.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaAdmin.cs",
-              "RelativeToolTip": "Servidor\\Interfaces\\IVistaAdmin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "VistaDisponibilidadService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\VistaDisponibilidadService.cs",
+              "RelativeDocumentMoniker": "Servidor\\Services\\VistaDisponibilidadService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\VistaDisponibilidadService.cs",
+              "RelativeToolTip": "Servidor\\Services\\VistaDisponibilidadService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T08:18:46.516Z"
+              "WhenOpened": "2024-11-24T10:59:01.974Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IAdmin.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IAdmin.cs",
-              "RelativeDocumentMoniker": "Servidor\\Interfaces\\IAdmin.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IAdmin.cs",
-              "RelativeToolTip": "Servidor\\Interfaces\\IAdmin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "MontoController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\MontoController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\MontoController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\MontoController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\MontoController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAD4vxQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:27:31.477Z"
+              "WhenOpened": "2024-11-27T08:06:04.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "VistaDisponibilidadController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\VistaDisponibilidadController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\VistaDisponibilidadController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\VistaDisponibilidadController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\VistaDisponibilidadController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T11:02:27.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "RegistroVistaAdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\RegistroVistaAdminController.cs",
-              "RelativeDocumentMoniker": "Servidor\\Controllers\\RegistroVistaAdminController.cs",
-              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\RegistroVistaAdminController.cs",
-              "RelativeToolTip": "Servidor\\Controllers\\RegistroVistaAdminController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:38:47.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 6,
               "Title": "EstacionamientoController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\EstacionamientoController.cs",
               "RelativeDocumentMoniker": "Servidor\\Controllers\\EstacionamientoController.cs",
@@ -519,15 +237,327 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 7,
+              "Title": "IngresoAutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\IngresoAutoController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\IngresoAutoController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:38:06.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RepositoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
+              "RelativeDocumentMoniker": "Servidor\\Services\\RepositoryService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
+              "RelativeToolTip": "Servidor\\Services\\RepositoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:57:01.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VistaDisponibilidad.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\VistaDisponibilidad.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\VistaDisponibilidad.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\VistaDisponibilidad.cs",
+              "RelativeToolTip": "Servidor\\Models\\VistaDisponibilidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T10:56:45.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "VistaDisponibilidadContext.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\VistaDisponibilidadContext.cs",
               "RelativeDocumentMoniker": "Servidor\\Context\\VistaDisponibilidadContext.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\VistaDisponibilidadContext.cs",
               "RelativeToolTip": "Servidor\\Context\\VistaDisponibilidadContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBcAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T09:26:26.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DbFinalProjectContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\DbFinalProjectContext.cs",
+              "RelativeDocumentMoniker": "Servidor\\Context\\DbFinalProjectContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\DbFinalProjectContext.cs",
+              "RelativeToolTip": "Servidor\\Context\\DbFinalProjectContext.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowBgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:15:01.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Irepository.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
+              "RelativeDocumentMoniker": "Servidor\\Interfaces\\Irepository.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
+              "RelativeToolTip": "Servidor\\Interfaces\\Irepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:56:17.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Program.cs",
+              "RelativeDocumentMoniker": "Servidor\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Program.cs",
+              "RelativeToolTip": "Servidor\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T10:53:26.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegistroVistaAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RegistroVistaAdminService.cs",
+              "RelativeDocumentMoniker": "Servidor\\Services\\RegistroVistaAdminService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RegistroVistaAdminService.cs",
+              "RelativeToolTip": "Servidor\\Services\\RegistroVistaAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:26:19.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\appsettings.json",
+              "RelativeDocumentMoniker": "Servidor\\appsettings.json",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\appsettings.json",
+              "RelativeToolTip": "Servidor\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-22T10:59:12.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IngresoAuto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\IngresoAuto.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\IngresoAuto.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\IngresoAuto.cs",
+              "RelativeToolTip": "Servidor\\Models\\IngresoAuto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:06:23.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CalcularTarifaService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\CalcularTarifaService.cs",
+              "RelativeDocumentMoniker": "Servidor\\Services\\CalcularTarifaService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\CalcularTarifaService.cs",
+              "RelativeToolTip": "Servidor\\Services\\CalcularTarifaService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwD0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T23:41:51.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegistroVistaAdminContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\RegistroVistaAdminContext.cs",
+              "RelativeDocumentMoniker": "Servidor\\Context\\RegistroVistaAdminContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\RegistroVistaAdminContext.cs",
+              "RelativeToolTip": "Servidor\\Context\\RegistroVistaAdminContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:22:25.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CalcularTarifaController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CalcularTarifaController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\CalcularTarifaController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CalcularTarifaController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\CalcularTarifaController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T23:40:30.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LogMessageController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\LogMessageController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\LogMessageController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\LogMessageController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\LogMessageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T04:06:09.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Servidor\\Services\\AdminService.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\AdminService.cs",
+              "RelativeToolTip": "Servidor\\Services\\AdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T01:46:26.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CuentaController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CuentaController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\CuentaController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\CuentaController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\CuentaController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:31:45.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LogsMessages.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\LogsMessages.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\LogsMessages.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\LogsMessages.cs",
+              "RelativeToolTip": "Servidor\\Models\\LogsMessages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T03:07:22.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Cuenta.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Cuenta.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\Cuenta.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Cuenta.cs",
+              "RelativeToolTip": "Servidor\\Models\\Cuenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:03:47.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CuentaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\CuentaContext.cs",
+              "RelativeDocumentMoniker": "Servidor\\Context\\CuentaContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\CuentaContext.cs",
+              "RelativeToolTip": "Servidor\\Context\\CuentaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:02:05.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Estacionamientos.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Estacionamientos.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\Estacionamientos.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\Estacionamientos.cs",
+              "RelativeToolTip": "Servidor\\Models\\Estacionamientos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:09:27.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TipoVehiculoController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\TipoVehiculoController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\TipoVehiculoController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\TipoVehiculoController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\TipoVehiculoController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T10:04:56.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TipoAuto.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\TipoAuto.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\TipoAuto.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\TipoAuto.cs",
+              "RelativeToolTip": "Servidor\\Models\\TipoAuto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:07:36.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegistroVistaAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\RegistroVistaAdmin.cs",
+              "RelativeDocumentMoniker": "Servidor\\Models\\RegistroVistaAdmin.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Models\\RegistroVistaAdmin.cs",
+              "RelativeToolTip": "Servidor\\Models\\RegistroVistaAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:20:14.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IVistaAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaAdmin.cs",
+              "RelativeDocumentMoniker": "Servidor\\Interfaces\\IVistaAdmin.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IVistaAdmin.cs",
+              "RelativeToolTip": "Servidor\\Interfaces\\IVistaAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T08:18:46.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IAdmin.cs",
+              "RelativeDocumentMoniker": "Servidor\\Interfaces\\IAdmin.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\IAdmin.cs",
+              "RelativeToolTip": "Servidor\\Interfaces\\IAdmin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T11:27:31.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "VistaDisponibilidadController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\VistaDisponibilidadController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\VistaDisponibilidadController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\VistaDisponibilidadController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\VistaDisponibilidadController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T11:02:27.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "RegistroVistaAdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\RegistroVistaAdminController.cs",
+              "RelativeDocumentMoniker": "Servidor\\Controllers\\RegistroVistaAdminController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\RegistroVistaAdminController.cs",
+              "RelativeToolTip": "Servidor\\Controllers\\RegistroVistaAdminController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T23:38:47.472Z"
             }
           ]
         }

@@ -297,12 +297,12 @@ select * from ver_disponibilidad
 delete from ingreso_auto
 
 
-exec RegistrarEntrada @TipoVehiculoId = 1
+exec RegistrarEntrada @TipoVehiculoId = 3
 
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = '79013320', @TipoVehiculoId = 3 -- aqui hay un BUG, cuando registras una salida con un codigo que 
+exec RegistrarSalida @Code = '02215149', @TipoVehiculoId = 3 -- aqui hay un BUG, cuando registras una salida con un codigo que 
 --no esta en el registro se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0

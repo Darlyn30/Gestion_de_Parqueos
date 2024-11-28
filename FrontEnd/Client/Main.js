@@ -14,6 +14,10 @@ const divs = {
     cancel: document.querySelector(".cancel"),
 
     //divs de los containers de las imagenes
+
+}
+
+const buttons = {
     car: document.getElementById("1"),
     moto: document.getElementById("2"),
     truck: document.getElementById("3"),
@@ -38,104 +42,74 @@ function parkingVehicle(){
 
     //ESTA SOLUCION SERA TEMPORAL, ES UNA MUY MALA PRACTICA Y ESTOY VIOLANDO EL DRY
 
+    
 
+    Object.values(buttons).forEach((button) => {
+        button.addEventListener("click", () => {
+            console.log(`Se pulsó el botón con id: ${button.id}`);
 
-    vehicleType.car.addEventListener("click", () => {
-        let id = 1;
-        console.log("carro");
-        const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
+            let tipo;
 
-        fetch(URL_REGISTER_CAR, {
-            method: 'POST',
-            headers: {
-                'Content-Type' : 'application/json'
+            switch(button.id){
+                case "1":
+                    tipo = "Automovil";
+                    break;
+                case "2":
+                    tipo = "Motocicleta";
+                    break;
+                case "3":
+                    tipo = "Camion";
+                    break;
             }
-            
-        })
-        .then(data => {
-            fetch(URL_API_GET_ALL_VEHICLES)
+            console.log(tipo);
+            const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${button.id}`;
+
+            const URL_CAR_DISPO =  `https://localhost:7058/api/EstacionamientoSet?tipo=${tipo}`
+
+            fetch(URL_CAR_DISPO, {
+                method: 'GET'
+            })
             .then(res => res.json())
-            .then(datos => {
-                datos.forEach(Code => {
-                    console.log("Vehiculo Agregado con exito");
+            .then(data => {
+                console.log(data.mensaje);
+
+                let msg = "No hay espacios disponibles para el tipo";
+
+                if(data.mensaje.includes(msg)){
                     swal({
-                        title: "Registro Exitoso!",
-                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
-                        icon: "success",
+                        title: "Lo Sentimos!",
+                        text: "No hay espacio disponible para Este tipo de vehiculo",
+                        icon: "error",
+                    })
+                } else {
+                    fetch(URL_REGISTER_CAR, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type' : 'application/json'
+                    }
                     })
                     .then(res => {
-                        window.location = "./Cliente.html";
-                    });
-                })
 
-            })
-
-        })
-    })
-
-    vehicleType.moto.addEventListener("click", () => {
-        let id = 2;
-        console.log("motor")
-        const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
-        fetch(URL_REGISTER_CAR, {
-            method: 'POST',
-            headers: {
-                'Content-Type' : 'application/json'
-            },
-            
-        })
-        .then(data => {
-            fetch(URL_API_GET_ALL_VEHICLES)
-            .then(res => res.json())
-            .then(datos => {
-                datos.forEach(Code => {
-                    console.log("Vehiculo Agregado con exito");
-                    swal({
-                        title: "Registro Exitoso!",
-                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
-                        icon: "success",
+                        fetch(URL_API_GET_ALL_VEHICLES)
+                        .then(res => res.json())
+                        .then(datos => {
+                            let lastIndex = datos.at(- 1);
+                            swal({
+                                title: "Peticion Exitosa!",
+                                text: `Vehiculo agregado [${lastIndex.tipoVehiculo}] Exitosamente! \n Codigo de retiro: ${lastIndex.codigo}`,
+                                icon: "success",
+                            })
+                            .then(res => {
+                                window.location = "./Cliente.html";
+                            })
+                        })
                     })
-                    .then(res => {
-                        window.location = "./Cliente.html";
-                    });
-                })
+                }
 
-            })
+            });
 
-        })
-    })
-
-    vehicleType.truck.addEventListener("click", () => {
-        let id = 3;
-        console.log("truck")
-        const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
-        fetch(URL_REGISTER_CAR, {
-            method: 'POST',
-            headers: {
-                'Content-Type' : 'application/json'
-            },
-            
-        })
-        .then(data => {
-            fetch(URL_API_GET_ALL_VEHICLES)
-            .then(res => res.json())
-            .then(datos => {
-                datos.forEach(Code => {
-                    console.log("Vehiculo Agregado con exito");
-                    swal({
-                        title: "Registro Exitoso!",
-                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
-                        icon: "success",
-                    })
-                    .then(res => {
-                        window.location = "./Cliente.html";
-                    });
-                })
-
-            })
-
-        })
-    })
+        });
+      });
 
 }
 
@@ -177,7 +151,7 @@ function retireVehicle(){
                     const URL_RETIRE_CAR = `https://localhost:7058/api/IngresoAuto?id=${vehicleType}&code=${Codigo.codigo}`
 
                 if(inputCode == Codigo.codigo && tipo == Codigo.tipoVehiculo){
-                    const URL_API_MONTO = `https://localhost:7058/api/Monto?horaEntrada=${Codigo.hora_entrada}&vehiculoId=${vehicleType}`
+                    const URL_API_MONTO = `https://localhost:7058/api/Monto?horaEntrada=${Codigo.hora_entrada}&vehiculoId=${vehicleType}` //este monto se actualiza en tiempo real, segun la hora de la fecha de entrada
                     
                     fetch(URL_API_MONTO)
                     .then(resp => resp.json())
@@ -229,8 +203,6 @@ function retireVehicle(){
 
 
                     })
-                    
-                    
                     
 
                 } else {
