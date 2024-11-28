@@ -5,8 +5,8 @@ namespace Servidor.Interfaces
     public interface Irepository<T>
     {
         List<T> GetAll();
-        Task SP_register(int id);
-        Task SP_eliminarRegister(string code, int id);
+        void SP_register(int id);
+        void SP_eliminarRegister(string code, int id);
 
         string saveLogTxt();
         

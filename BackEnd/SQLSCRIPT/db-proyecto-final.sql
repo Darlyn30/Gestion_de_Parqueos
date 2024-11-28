@@ -302,7 +302,7 @@ exec RegistrarEntrada @TipoVehiculoId = 1
 select * from ingreso_auto
 
 --PENDIENTE
-exec RegistrarSalida @Code = '55187165', @TipoVehiculoId = 1 -- aqui hay un BUG, cuando registras una salida con un codigo que 
+exec RegistrarSalida @Code = '79013320', @TipoVehiculoId = 3 -- aqui hay un BUG, cuando registras una salida con un codigo que 
 --no esta en el registro se desocupa un parqueo de igual manera
 
 UPDATE Estacionamientos SET Ocupados = 0

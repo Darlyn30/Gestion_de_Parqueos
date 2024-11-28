@@ -17,22 +17,22 @@ namespace Servidor.Context
 
         
 
-        public async Task ingresarVehiculo(int tipoVehiculo)
+        public void ingresarVehiculo(int tipoVehiculo)
         {
             var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
 
             // Llama al procedimiento almacenado con FromSqlRaw
-            await ingreso_auto.FromSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam).ToListAsync();
+            Database.ExecuteSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam);
         }
 
-        public async Task BorrarVehiculo(string Code, int TipoVehiculoId)
+        public void BorrarVehiculo(string Code, int TipoVehiculoId)
         {
             try
             {
                 var tipoParam = new SqlParameter("@TipoVehiculoId", TipoVehiculoId);
                 var codigoParam = new SqlParameter("@Code", Code);
 
-                await ingreso_auto.FromSqlRaw("EXEC RegistrarSalida @Code = @Code, @TipoVehiculoId = @TipoVehiculoId", codigoParam, tipoParam).ToListAsync();
+                Database.ExecuteSqlRaw("EXEC RegistrarSalida @Code = @Code, @TipoVehiculoId = @TipoVehiculoId", codigoParam, tipoParam);
             }
             catch (Exception ex)
             {

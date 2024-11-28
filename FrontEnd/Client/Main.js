@@ -4,6 +4,7 @@ const btns = {
     retire: document.querySelector(".retire"),
 }
 
+const URL_API_GET_ALL_VEHICLES = "https://localhost:7058/api/IngresoAuto";
 const btnFind = document.getElementById("btnFind");
 
 const divs = {
@@ -41,63 +42,98 @@ function parkingVehicle(){
 
     vehicleType.car.addEventListener("click", () => {
         let id = 1;
+        console.log("carro");
         const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
 
         fetch(URL_REGISTER_CAR, {
-            method: 'GET',
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+            
         })
-        .then(res => res.json())
         .then(data => {
-            console.log("Vehiculo Agregado con exito");
-            swal({
-                title: "Registro Exitoso!",
-                text: `Se ha registrado su vehiculo [${"Automovil"}] Exitosamente!`,
-                icon: "success",
+            fetch(URL_API_GET_ALL_VEHICLES)
+            .then(res => res.json())
+            .then(datos => {
+                datos.forEach(Code => {
+                    console.log("Vehiculo Agregado con exito");
+                    swal({
+                        title: "Registro Exitoso!",
+                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
+                        icon: "success",
+                    })
+                    .then(res => {
+                        window.location = "./Cliente.html";
+                    });
+                })
+
             })
-            .then(res => {
-                window.location = "./Cliente.html";
-            });
+
         })
     })
 
     vehicleType.moto.addEventListener("click", () => {
         let id = 2;
+        console.log("motor")
         const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
         fetch(URL_REGISTER_CAR, {
-            method: 'GET',
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            
         })
-        .then(res => res.json())
         .then(data => {
-            console.log("Vehiculo Agregado con exito");
-            swal({
-                title: "Registro Exitoso!",
-                text: `Se ha registrado su vehiculo [${"Motocicleta"}] Exitosamente!`,
-                icon: "success",
+            fetch(URL_API_GET_ALL_VEHICLES)
+            .then(res => res.json())
+            .then(datos => {
+                datos.forEach(Code => {
+                    console.log("Vehiculo Agregado con exito");
+                    swal({
+                        title: "Registro Exitoso!",
+                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
+                        icon: "success",
+                    })
+                    .then(res => {
+                        window.location = "./Cliente.html";
+                    });
+                })
+
             })
-            .then(res => {
-                window.location = "./Cliente.html";
-            });
+
         })
     })
 
     vehicleType.truck.addEventListener("click", () => {
         let id = 3;
+        console.log("truck")
         const URL_REGISTER_CAR = `https://localhost:7058/api/IngresoAuto?id=${id}`;
         fetch(URL_REGISTER_CAR, {
-            method: 'GET'
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            
         })
-        .then(res => res.json())
         .then(data => {
-            console.log(data);
-            console.log("Vehiculo Agregado con exito");
-            swal({
-                title: "Registro Exitoso!",
-                text: `Se ha registrado su vehiculo [${"Camion"}] Exitosamente!`,
-                icon: "success",
+            fetch(URL_API_GET_ALL_VEHICLES)
+            .then(res => res.json())
+            .then(datos => {
+                datos.forEach(Code => {
+                    console.log("Vehiculo Agregado con exito");
+                    swal({
+                        title: "Registro Exitoso!",
+                        text: `Se ha registrado su vehiculo [${Code.tipoVehiculo}] Exitosamente! \n Este es Codigo para retirar ${Code.codigo}`,
+                        icon: "success",
+                    })
+                    .then(res => {
+                        window.location = "./Cliente.html";
+                    });
+                })
+
             })
-            .then(res => {
-                window.location = "./Cliente.html";
-            });
+
         })
     })
 
@@ -141,32 +177,62 @@ function retireVehicle(){
                     const URL_RETIRE_CAR = `https://localhost:7058/api/IngresoAuto?id=${vehicleType}&code=${Codigo.codigo}`
 
                 if(inputCode == Codigo.codigo && tipo == Codigo.tipoVehiculo){
+                    const URL_API_MONTO = `https://localhost:7058/api/Monto?horaEntrada=${Codigo.hora_entrada}&vehiculoId=${vehicleType}`
+                    
+                    fetch(URL_API_MONTO)
+                    .then(resp => resp.json())
+                    .then(dataMonto => {
+                        console.log(dataMonto);
 
-                    swal("Desea Retirar el vehiculo con el ID de parqueo: " + Codigo.codigo, {
-                        dangerMode: true,
-                        buttons: true,
-                    })
-                    .then(res => {
-                        fetch(URL_RETIRE_CAR, {
-                            method: 'DELETE',
-                            headers: {
-                                'Content-Type' : 'application/json'
-                            }
-
+                        
+                        swal({
+                            title: "Are you sure?",
+                            text: `Esta seguro que desea retirar el vehiculo de ID: ${Codigo.codigo} \n Monto a pagar: US$ ${dataMonto}`,
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
                         })
-                        .then(res => {
-                            if(res.status == 200){
+                        .then((willDelete) => {
+                            if(willDelete) {
+
+                                fetch(URL_RETIRE_CAR, {
+                                    method: 'DELETE',
+                                    headers: {
+                                        'Content-Type' : 'application/json'
+                                    }
+        
+                                })
+                                .then(res => {
+                                    if(res.status == 200){
+                                        swal({
+                                            title: "Peticion Exitosa!",
+                                            text: `Vehiculo Retirado de forma exitosa!`,
+                                            icon: "success",
+                                        })
+                                        .then(res => {
+                                            window.location = "./Cliente.html";
+                                        })
+                                    }
+                                })
+                            } else {
                                 swal({
-                                    title: "Peticion Exitosa!",
-                                    text: `Vehiculo Retirado de forma exitosa!`,
+                                    title: "No hay problema!",
+                                    text: "Puede retirarse cuando guste!",
                                     icon: "success",
                                 })
                                 .then(res => {
                                     window.location = "./Cliente.html";
-                                })
+                                });
                             }
-                        })
-                    });
+
+                        });
+
+
+                    })
+                    
+                    
+                    
+
                 } else {
                     swal({
                         title: "Vehiculo no encontrado",

@@ -26,15 +26,15 @@ namespace Servidor.Services
             return dbSet.ToList();
         }
 
-        public async Task SP_register(int id)
+        public void SP_register(int id)
         {
-            await _context.ingresarVehiculo(id);
+            _context.ingresarVehiculo(id);
             
         }
 
-        public async Task SP_eliminarRegister(string code, int id)
+        public void SP_eliminarRegister(string code, int id)
         {
-            await _context.BorrarVehiculo(code, id);
+            _context.BorrarVehiculo(code, id);
             
         }
 

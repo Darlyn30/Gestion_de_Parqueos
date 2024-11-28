@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\context\\dbfinalprojectcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\repositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\repositoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\controllers\\ingresoautocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\services\\registrovistaadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\services\\registrovistaadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|solutionrelative:servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DF0CCC6-D19D-44D1-9207-80DDB5581C93}|Servidor\\Servidor.csproj|c:\\users\\admin\\videos\\proyectosjs\\proyecto-final-prog2\\backend\\servidor\\servidor\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -148,14 +148,14 @@
               "RelativeDocumentMoniker": "Servidor\\Context\\DbFinalProjectContext.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Context\\DbFinalProjectContext.cs",
               "RelativeToolTip": "Servidor\\Context\\DbFinalProjectContext.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowBQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T11:15:01.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Program.cs",
               "RelativeDocumentMoniker": "Servidor\\Program.cs",
@@ -168,46 +168,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RepositoryService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
               "RelativeDocumentMoniker": "Servidor\\Services\\RepositoryService.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RepositoryService.cs",
               "RelativeToolTip": "Servidor\\Services\\RepositoryService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAwwB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T10:57:01.415Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IngresoAutoController.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
               "RelativeDocumentMoniker": "Servidor\\Controllers\\IngresoAutoController.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Controllers\\IngresoAutoController.cs",
               "RelativeToolTip": "Servidor\\Controllers\\IngresoAutoController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACUAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvygAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T23:38:06.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Irepository.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
               "RelativeDocumentMoniker": "Servidor\\Interfaces\\Irepository.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Interfaces\\Irepository.cs",
               "RelativeToolTip": "Servidor\\Interfaces\\Irepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T10:56:17.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RegistroVistaAdminService.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\RegistroVistaAdminService.cs",
               "RelativeDocumentMoniker": "Servidor\\Services\\RegistroVistaAdminService.cs",
@@ -215,8 +215,7 @@
               "RelativeToolTip": "Servidor\\Services\\RegistroVistaAdminService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:26:19.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T23:26:19.757Z"
             },
             {
               "$type": "Document",
@@ -228,8 +227,7 @@
               "RelativeToolTip": "Servidor\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-22T10:59:12.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T10:59:12.665Z"
             },
             {
               "$type": "Document",
@@ -241,8 +239,7 @@
               "RelativeToolTip": "Servidor\\Models\\IngresoAuto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T11:06:23.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T11:06:23.812Z"
             },
             {
               "$type": "Document",
@@ -254,8 +251,7 @@
               "RelativeToolTip": "Servidor\\Controllers\\MontoController.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAD4vxYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T08:06:04.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T08:06:04.539Z"
             },
             {
               "$type": "Document",
@@ -267,8 +263,7 @@
               "RelativeToolTip": "Servidor\\Services\\CalcularTarifaService.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAgwD0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T23:41:51.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T23:41:51.451Z"
             },
             {
               "$type": "Document",
@@ -280,8 +275,7 @@
               "RelativeToolTip": "Servidor\\Context\\RegistroVistaAdminContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T23:22:25.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T23:22:25.557Z"
             },
             {
               "$type": "Document",
@@ -293,8 +287,7 @@
               "RelativeToolTip": "Servidor\\Interfaces\\ITarifa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T23:41:08.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T23:41:08.176Z"
             },
             {
               "$type": "Document",
@@ -306,8 +299,7 @@
               "RelativeToolTip": "Servidor\\Controllers\\CalcularTarifaController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T23:40:30.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T23:40:30.448Z"
             },
             {
               "$type": "Document",
@@ -319,8 +311,7 @@
               "RelativeToolTip": "Servidor\\Controllers\\LogMessageController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T04:06:09.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T04:06:09.302Z"
             },
             {
               "$type": "Document",
@@ -332,8 +323,7 @@
               "RelativeToolTip": "Servidor\\Services\\AdminService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:46:26.035Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T01:46:26.035Z"
             },
             {
               "$type": "Document",
