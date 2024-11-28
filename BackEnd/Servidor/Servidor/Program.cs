@@ -12,13 +12,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//connection
 var conn = builder.Configuration.GetConnectionString("AppConnection");
-
+//context
 builder.Services.AddDbContext<CuentaContext>(x => x.UseSqlServer(conn));
 builder.Services.AddDbContext<DbFinalProjectContext>(x => x.UseSqlServer(conn));
 builder.Services.AddDbContext<RegistroVistaAdminContext>(x => x.UseSqlServer(conn));
+builder.Services.AddDbContext<VistaDisponibilidadContext>(x => x.UseSqlServer(conn));
 
-
+//services
+builder.Services.AddScoped<IVistaAdmin, RegistroVistaAdminService>();
+builder.Services.AddScoped<ITarifa, CalcularTarifaService>();
+builder.Services.AddScoped<IVistaDisponibilidad, VistaDisponibilidadService>();
 builder.Services.AddScoped<IAdmin, AdminService>();
 builder.Services.AddScoped(typeof(Irepository<>), typeof(RepositoryService<>));
 

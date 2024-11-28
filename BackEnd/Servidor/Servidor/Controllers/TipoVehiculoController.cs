@@ -7,17 +7,17 @@ namespace Servidor.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MontoPagarController : ControllerBase
+    public class TipoVehiculoController : ControllerBase
     {
-        private readonly Irepository<MontoPagar> oRepository;
-        public MontoPagarController(Irepository<MontoPagar> oRepository)
+        private readonly Irepository<TipoAuto> oRepository;
+        public TipoVehiculoController(Irepository<TipoAuto> oRepository)
         {
             this.oRepository = oRepository;
         }
 
         [HttpGet]
 
-        public IActionResult Get()
+        public IActionResult GetTipoVehiculo()
         {
             var result = oRepository.GetAll();
             return Ok(result);

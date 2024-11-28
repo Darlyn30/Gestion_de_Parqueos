@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles.css">
+    <title>DDA GARAGE</title>
+</head>
+<body>
+    <div class="container">
+        <div class="eleccion">
+            <h2>Va a parquear o a retirar un vehiculo?</h2>
+            <button class="parking">Parquear vehiculo</button>
+            <button class="retire">Retirar vehiculo</button>
+        </div>
+
+        <div class="cancel" style="display: none;">
+            <h1>X</h1>
+        </div>
+        <div class="parquear" style="display: none;">
+            <div class="car" id="1">
+                <img src="../VistaAdministrador/src/carro.png" alt="carro">
+            </div>
+
+            <div class="moto" id="2">
+                <img src="../VistaAdministrador/src/motocicleta.png" alt="carro">
+            </div>
+
+            <div class="truck" id="3">
+                <img src="../VistaAdministrador/src/camion.png" alt="carro">
+            </div>
+        </div>
+
+        <div class="retirar" style="display: none;">
+            <h2>Ingrese Codigo de Parqueo</h2>
+            <input type="text" name="" id="inputCode" placeholder="Ingrese Codigo de Parqueo">
+
+            <select id="vehicleType" name="vehicleType" required>
+                <option value="">Tipo de Vehiculo</option>
+                <option value="1">Automovil</option>
+                <option value="2">Motocicleta</option>
+                <option value="3">Camion</option>
+            </select>
+
+            <button id="btnFind">Buscar Vehiculo</button>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+98: Entrada registrada.
+
+99: Minutos Totales: 55
+
+100: Costo Total: 10.00
+
+101: Salida registrada.
+
+102: Entrada registrada.
+
+103: Minutos Totales: 1
+
+104: Costo Total: 0.00
+
+105: Salida registrada.
+
+106: Entrada registrada.
+
+107: Entrada registrada.
+
+108: Minutos Totales: 203
+
+109: Costo Total: 40.00
+
+110: Salida registrada.
+
+111: Minutos Totales: 206
+
+112: Costo Total: 80.00
+
+113: Salida registrada.
+
+114: Entrada registrada.
+
+115: Entrada registrada.
+
+116: Entrada registrada.
+
+117: Minutos Totales: 6
+
+118: Entrada registrada.
+
+119: Minutos Totales: 23
+
+120: Costo Total: 10.00
+
+121: Salida registrada.
+
+122: Minutos Totales: 10
+
+123: Costo Total: 0.00
+
+124: Salida registrada.
+
+125: Minutos Totales: 8
+
+126: Costo Total: 0.00
+
+127: Salida registrada.
+
+128: Minutos Totales: 3
+
+129: Costo Total: 0.00
+
+130: Salida registrada.
+
+131: Entrada registrada.
+
+132: Minutos Totales: 1
+
+133: Costo Total: 0.00
+
+134: Entrada registrada.
+
+135: Minutos Totales: 4
+
+136: Costo Total: 0.00
+
+137: Salida registrada.
+
+138: Minutos Totales: 8
+
+139: Costo Total: 0.00
+
+140: Salida registrada.
+

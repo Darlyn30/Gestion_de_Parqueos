@@ -4,6 +4,7 @@ namespace Servidor.Interfaces
 {
     public interface IVistaDisponibilidad
     {
-        List<VerDisponibilidad> GetDisponibilidad();
+        List<VistaDisponibilidad> GetInfo();
+        string SetEstacionamientos(string tipo);
     }
 }

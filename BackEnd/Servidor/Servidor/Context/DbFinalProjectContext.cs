@@ -17,32 +17,34 @@ namespace Servidor.Context
 
         
 
-        public async Task<List<IngresoAuto>> ingresarVehiculo(int tipoVehiculo)
+        public void ingresarVehiculo(int tipoVehiculo)
         {
             var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
 
             // Llama al procedimiento almacenado con FromSqlRaw
-            return await ingreso_auto.FromSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam).ToListAsync();
+            Database.ExecuteSqlRaw("EXEC RegistrarEntrada @TipoVehiculoId", tipoParam);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public void BorrarVehiculo(string Code, int TipoVehiculoId)
         {
-            modelBuilder.Entity<IngresoAuto>()
-                .ToTable(tb => tb.HasTrigger("asignarCodeAll"));
-        }
+            try
+            {
+                var tipoParam = new SqlParameter("@TipoVehiculoId", TipoVehiculoId);
+                var codigoParam = new SqlParameter("@Code", Code);
 
-        public async Task<List<IngresoAuto>> BorrarVehiculo(int tipoVehiculo, string code)
-        {
-            var tipoParam = new SqlParameter("@TipoVehiculoId", tipoVehiculo);
-            var codigo = new SqlParameter("@Code", code);
-
-            // Llama al procedimiento almacenado con FromSqlRaw
-            return await ingreso_auto.FromSqlRaw("EXEC RegistrarSalida @Code", codigo, "@TipoVehiculoId", tipoParam).ToListAsync();
+                Database.ExecuteSqlRaw("EXEC RegistrarSalida @Code = @Code, @TipoVehiculoId = @TipoVehiculoId", codigoParam, tipoParam);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                // Puedes loguear el error o retornar un mensaje de error al cliente
+                throw new Exception("Error al ejecutar el procedimiento almacenado", ex);
+            }
         }
 
         public DbSet<TipoAuto> tipo_vehiculos {  get; set; }
 
         public DbSet<Estacionamientos> Estacionamientos { get; set; }
-        public DbSet<MontoPagar> montoPagarCar {  get; set; }
+        public DbSet<LogsMessages> LogMessages { get; set; }
     }
 }

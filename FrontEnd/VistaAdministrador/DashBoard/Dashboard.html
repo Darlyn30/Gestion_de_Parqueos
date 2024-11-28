@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles.css">
+    
+    <title>DashBoard</title>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#Inicio" class="active">Inicio</a>
+        <a href="#Disponibilidad">Disponibilidad</a>
+        <a href="#Tarifas">Calcular Tarifas</a>
+        <a href="#VehiculosEnParqueo">Vehiculos En El Parqueo</a>
+        <a href="#InformeGeneral">Informe General</a>
+        <a href="../Login/Login.html">Cerrar Sesion</a>
+    </div>
+
+    <div class="content">
+        <div class="home">
+            
+            <h1 class="W"></h1>
+        </div>
+        <div class="disponibilidad" style="display: none;">
+            <!-- RECIBIRA DATOS DESDE EL JS DE FORMA DINAMICA -->
+            <h1 class="disp">Disponibilidad</h1>
+            <!-- Este h1 -->
+
+            <Table border="1" id="crudTable">
+                <thead>
+
+                    <th>Tipo de Parqueo</th>
+                    <th>Total Disponibles</th>
+                    <th>Total Ocupados</th>
+                    <th>Precio por hora</th>
+                </thead>
+                <tbody>
+                    <!-- LOS VALORES VENDRAN DE FORMA DINAMICA -->
+                </tbody>
+            </Table>
+
+        </div>
+
+        <div class="tarifas" style="display: none;">
+            <h1 class="disp">Calculadora de Tarifas</h1>
+            <!-- LOGICA: HACER COMO UN CALCULO DE TARIFA COMO EN LA APP DE DJ PACK
+             CALCULAR LA LIBRA Y ESA WEA
+            -->
+
+            <form id="tarifasForm">
+                <div class="form-group">
+                    <label for="vehicleType">Tipo de Vehículo:</label>
+                    <select id="vehicleType" name="vehicleType" required>
+                        <option value="1">Automovil</option>
+                        <option value="2">Motocicleta</option>
+                        <option value="3">Camion</option>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="timeAmount">Cantidad de tiempo:</label>
+                    <input type="number" id="timeAmount" name="timeAmount" min="1" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="timeUnit">Unidad de tiempo:</label>
+                    <select id="timeUnit" name="timeUnit" required>
+                        <option value="horas">Horas</option>
+                        <option value="minutos">Minutos</option>
+                    </select>
+                </div>
+        
+            </form>
+            <button type="button" class="btnResultCalc">Calcular</button>
+        
+            <div id="tariffResult" style="display: none;">
+                <h3>Resultado del Cálculo:</h3>
+                <p id="resultMessage"></p>
+            </div>
+
+        </div>
+
+        <div class="vehiculosParqueo" style="display: none;">
+            <h1 class="disp">Vehiculos en el Parqueo(Actualmente)</h1>
+            <!-- AQUI SE AGREGARA UNA VISTA EN SQL PARA ESTO -->
+
+            <table id="tablaVehiculos">
+                <thead>
+                    <tr>
+                        <th>ID Vehículo</th>
+                        <th>Tipo de Vehiculo</th>
+                        <th>Hora de Ingreso</th>
+                        <th>Monto a Pagar</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="tbodyVehiculos">
+                    <!-- Los datos de los vehiculos se agregarán aquí -->
+                </tbody>
+            </table>
+    
+            <div id="noData" class="no-data" style="display: none;">No hay vehículos parqueado
+        </div>
+    </div>
+
+
+
+    <script src="./Main.js"></script>
+</body>
+</html>

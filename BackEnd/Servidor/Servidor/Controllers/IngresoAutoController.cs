@@ -16,17 +16,26 @@ namespace Servidor.Controllers
             this.oRepository = oRepository;
         }
 
+        [HttpGet]
+
+        public IActionResult GetIngresos()
+        {
+            var result = oRepository.GetAll();
+            return Ok(result);
+        }
+
         [HttpPost]
 
         public void register(int id)
         {
+
             oRepository.SP_register(id);
             
         }
 
         [HttpDelete]
 
-        public void Delete(int id, string code)
+        public void Delete(string code, int id)
         {
             oRepository.SP_eliminarRegister(code, id);
         }

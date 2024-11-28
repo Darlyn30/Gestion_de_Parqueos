@@ -7,6 +7,6 @@ namespace Servidor.Models
         [Key]
         public int Id { get; set; }
         public string Tipo {  get; set; }
-        public string? Codigo {  get; set; }
+        
     }
 }

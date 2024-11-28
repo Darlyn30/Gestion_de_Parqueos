@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "Servidor.Controllers.CalcularTarifaController",
+    "Method": "GetCalculo",
+    "RelativePath": "api/CalcularTarifa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "formato",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "cantidad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Servidor.Controllers.CuentaController",
     "Method": "GetCuentas",
     "RelativePath": "api/Cuenta",
@@ -42,6 +68,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Servidor.Controllers.EstacionamientoSetController",
+    "Method": "Get",
+    "RelativePath": "api/EstacionamientoSet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.IngresoAutoController",
+    "Method": "GetIngresos",
+    "RelativePath": "api/IngresoAuto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Servidor.Controllers.IngresoAutoController",
     "Method": "register",
     "RelativePath": "api/IngresoAuto",
@@ -72,13 +124,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "code",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "code",
-        "Type": "System.String",
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -91,13 +143,34 @@
     ]
   },
   {
-    "ContainingType": "Servidor.Controllers.MontoPagarController",
+    "ContainingType": "Servidor.Controllers.LogMessageController",
     "Method": "Get",
-    "RelativePath": "api/MontoPagar",
+    "RelativePath": "api/LogMessage",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.MontoController",
+    "Method": "GetMonto",
+    "RelativePath": "api/Monto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "horaEntrada",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "vehiculoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -111,9 +184,19 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Servidor.Controllers.VerDisponibilidadController",
-    "Method": "Get",
-    "RelativePath": "api/VerDisponibilidad",
+    "ContainingType": "Servidor.Controllers.TipoVehiculoController",
+    "Method": "GetTipoVehiculo",
+    "RelativePath": "api/TipoVehiculo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.VistaDisponibilidadController",
+    "Method": "GetDisponibilad",
+    "RelativePath": "api/VistaDisponibilidad",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

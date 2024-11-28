@@ -5,6 +5,43 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/CalcularTarifa": {
+      "get": {
+        "tags": [
+          "CalcularTarifa"
+        ],
+        "parameters": [
+          {
+            "name": "vehiculoId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cantidad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cuenta": {
       "get": {
         "tags": [
@@ -58,7 +95,38 @@
         }
       }
     },
+    "/api/EstacionamientoSet": {
+      "get": {
+        "tags": [
+          "EstacionamientoSet"
+        ],
+        "parameters": [
+          {
+            "name": "tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/IngresoAuto": {
+      "get": {
+        "tags": [
+          "IngresoAuto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "IngresoAuto"
@@ -85,18 +153,18 @@
         ],
         "parameters": [
           {
+            "name": "code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "id",
             "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
-          },
-          {
-            "name": "code",
-            "in": "query",
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -107,10 +175,40 @@
         }
       }
     },
-    "/api/MontoPagar": {
+    "/api/LogMessage": {
       "get": {
         "tags": [
-          "MontoPagar"
+          "LogMessage"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Monto": {
+      "get": {
+        "tags": [
+          "Monto"
+        ],
+        "parameters": [
+          {
+            "name": "horaEntrada",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "vehiculoId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -131,10 +229,22 @@
         }
       }
     },
-    "/api/VerDisponibilidad": {
+    "/api/TipoVehiculo": {
       "get": {
         "tags": [
-          "VerDisponibilidad"
+          "TipoVehiculo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/VistaDisponibilidad": {
+      "get": {
+        "tags": [
+          "VistaDisponibilidad"
         ],
         "responses": {
           "200": {
@@ -193,6 +303,10 @@
             "nullable": true
           },
           "clave": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
             "type": "string",
             "nullable": true
           }

@@ -26,17 +26,40 @@ namespace Servidor.Services
             return dbSet.ToList();
         }
 
-        public async Task<List<IngresoAuto>> SP_register(int id)
+        public void SP_register(int id)
         {
-            
-            return await _context.ingresarVehiculo(id);
+            _context.ingresarVehiculo(id);
             
         }
 
-        public async Task<List<IngresoAuto>> SP_eliminarRegister(string code, int id)
+        public void SP_eliminarRegister(string code, int id)
         {
-            return await _context.BorrarVehiculo(id, code);
+            _context.BorrarVehiculo(code, id);
             
         }
+
+        public string saveLogTxt()
+        {
+            string path = "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Log.txt";
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    foreach (var item in _context.LogMessages)
+                    {
+                        sw.WriteLine($"{item.Id}: {item.Mensaje}\n");
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return "Txt Enviado Correctamente";
+        }
+
+
     }
 }

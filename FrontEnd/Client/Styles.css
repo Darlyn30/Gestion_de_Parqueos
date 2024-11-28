@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: Nunito, sans-serif;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+    background-color: #ccc; /* Color de fondo */
+}
+
+/* Contenedor de los botones */
+.eleccion{
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+}
+
+/* Estilos generales del botón */
+button {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-family: 'Nunito', sans-serif; /* Fuente Nunito */
+    font-size: 16px; /* Tamaño de la fuente */
+    padding: 12px 24px; /* Espaciado alrededor del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo mano */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para la animación */
+}
+
+/* Efecto de animación al hacer hover */
+button:hover {
+    background-color: #45a049; /* Cambiar color de fondo en hover */
+    transform: translateY(-4px); /* Elevar el botón */
+}
+
+/* Efecto de animación al hacer clic */
+button:active {
+    transform: translateY(2px); /* Hacer que el botón se baje al hacer clic */
+}
+
+.parquear img {
+    width: 250px;
+    margin-left: 65px;
+}
+
+.parquear div {
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    margin-left: 500px;
+    margin-top: 50px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px;
+    transition: transform 0.3s ease-out;;
+}
+
+
+
+.parquear div:hover {
+    cursor: pointer;
+    animation: boing 0.6s ease-out;
+}
+
+/* Animación boing */
+@keyframes boing {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2); /* Estiramiento inicial */
+    }
+    50% {
+        transform: scale(0.9); /* Compresión */
+    }
+    70% {
+        transform: scale(1.1); /* Rebote */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+.car img, .truck img {
+    margin-top: 30px;
+}
+
+.moto img{
+    margin-top: 10px;
+}
+
+.eleccion div:hover {
+    cursor: pointer;
+}
+
+.parquear .car {
+    position: absolute;
+    margin-left: -650px;
+    margin-top: -40px;
+
+}
+
+.parquear .moto {
+    position: absolute;
+    margin-left: -220px;
+    margin-top: -40px;
+}
+
+.parquear .truck {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -40px;
+}
+
+/* INPUT */
+
+input,
+select {
+  padding: 12px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-family: 'Nunito', sans-serif; /* Fuente Nunito */
+  border: 2px solid #ddd; /* Borde inicial */
+  border-radius: 8px; /* Bordes redondeados */
+  outline: none; /* Quita el borde por defecto al enfocar */
+  width: 250px; /* Ancho del input/select */
+  transition: border-color 0.3s ease, transform 0.3s ease; /* Animación de borde y escala */
+}
+
+/* Efecto al hacer focus en input y select */
+input:focus,
+select:focus {
+  border-color: #4CAF50; /* Cambio de color de borde */
+  transform: scale(1.05); /* Aumento de tamaño */
+}
+
+/* Efecto de animación en el placeholder (input) */
+input::placeholder {
+  color: #aaa; /* Color del placeholder */
+  transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color del placeholder cuando el input tiene el foco */
+input:focus::placeholder {
+  color: #4CAF50; /* Color del placeholder cuando está enfocado */
+}
+
+/* Estilo para las opciones del select */
+select {
+  -webkit-appearance: none; /* Elimina el estilo por defecto en WebKit */
+  -moz-appearance: none; /* Elimina el estilo por defecto en Firefox */
+  appearance: none; /* Elimina el estilo por defecto */
+  background: #fff url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 5"%3E%3Cpolygon points="0,0 10,0 5,5"%3E%3C/polygon%3E%3C/svg%3E') no-repeat right 10px center;
+  background-size: 12px;
+}
+
+
+
+
+.retirar button {
+    margin-left: 10px;
+}
+
+h1 {
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 450px;
+    font-size: 70px;
+}
+
+h1:hover {
+    cursor: pointer;
+}
