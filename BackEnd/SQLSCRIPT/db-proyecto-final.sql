@@ -311,6 +311,43 @@ SELECT * FROM LogMessages
 
 DELETE FROM LogMessages
 
+CREATE TABLE SesionIniciada
+(
+	Correo VARCHAR(100),
+	Clave VARCHAR(25),
+	Nombre VARCHAR(50),
+	PRIMARY KEY(Correo)
+)
+
+select * from SesionIniciada
+
+
+
+--para asegurarnos que haya una sesion iniciada, esto no va a tener contacto directamente con la tabla en el front, sino
+-- tendremos contactos con este SP
+CREATE PROCEDURE sp_ConsultaEInsertaEnSesion
+    @Email varchar(255)
+AS
+BEGIN
+    -- Selecciona los datos de la tabla cuentas
+    DECLARE @Nombre varchar(255);
+    DECLARE @Clave varchar(255);
+    DECLARE @Estatus BIT;
+    DECLARE @Pin varchar(4);
+
+    SELECT 
+        @Nombre = Nombre, 
+        @Clave = Clave
+    FROM cuentas
+    WHERE Correo = @Email
+
+    -- Inserta los datos en la tabla sesion
+    INSERT INTO SesionIniciada (Correo, Clave, Nombre)
+    VALUES (@Email, @Clave, @Nombre)
+END
+
+exec sp_ConsultaEInsertaEnSesion @Email = 'darlyn@gmail.com'
+
 
 
 

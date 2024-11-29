@@ -184,6 +184,60 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Servidor.Controllers.SesionController",
+    "Method": "Get",
+    "RelativePath": "api/Sesion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Servidor.Controllers.SesionController",
+    "Method": "keepSesion",
+    "RelativePath": "api/Sesion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Servidor.Controllers.SesionController",
+    "Method": "deleteSesion",
+    "RelativePath": "api/Sesion",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Servidor.Controllers.TipoVehiculoController",
     "Method": "GetTipoVehiculo",
     "RelativePath": "api/TipoVehiculo",
