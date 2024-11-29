@@ -18,7 +18,30 @@ document.addEventListener("DOMContentLoaded", () => {
     home();
 })
 
+function cerrarSesion(){
+    const URL_SESION = 'https://localhost:7058/api/Sesion';
+    fetch(URL_SESION)
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(account => {
+            let mail = account.correo;
+            const URL_SESION_EXIT = `https://localhost:7058/api/Sesion?email=${mail}`;
 
+
+            fetch(URL_SESION_EXIT, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type' : 'application/json'
+                }
+            })
+            .then(res => {
+                window.location = "../Login/Login.html";
+            })
+        })
+    })
+
+
+}
 
 // Función para ejecutar una acción segun el enlace clickeado
 
@@ -56,7 +79,7 @@ function handleSectionClick(section){
 
 function home(){
     //en el Home
-    const URL_API = "https://localhost:7058/api/Cuenta";
+    const URL_API = "https://localhost:7058/api/Sesion";
 
     divs.disponibilidad.style.display = "none";
     divs.tarifas.style.display = "none";
