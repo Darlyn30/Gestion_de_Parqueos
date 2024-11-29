@@ -3,7 +3,7 @@ const btns = {
     parking: document.querySelector(".parking"),
     retire: document.querySelector(".retire"),
 }
-
+const URL_API_LOGS = "https://localhost:7058/api/LogMessage";
 const URL_API_GET_ALL_VEHICLES = "https://localhost:7058/api/IngresoAuto";
 const btnFind = document.getElementById("btnFind");
 
@@ -16,6 +16,8 @@ const divs = {
     //divs de los containers de las imagenes
 
 }
+
+
 
 const buttons = {
     car: document.getElementById("1"),
@@ -39,13 +41,10 @@ function parkingVehicle(){
     divs.cancel.style.display = "block";
     divs.parking.style.display = "block";
 
-
-    //ESTA SOLUCION SERA TEMPORAL, ES UNA MUY MALA PRACTICA Y ESTOY VIOLANDO EL DRY
-
     
-
+    //esto busca dentro del objeto buttons donde se encuentran los 3 botones
     Object.values(buttons).forEach((button) => {
-        button.addEventListener("click", () => {
+        button.addEventListener("click", async () => {
             console.log(`Se pulsó el botón con id: ${button.id}`);
 
             let tipo;
@@ -83,26 +82,43 @@ function parkingVehicle(){
                     })
                 } else {
                     fetch(URL_REGISTER_CAR, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type' : 'application/json'
-                    }
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
                     })
-                    .then(res => {
+                    .then(datos => {
+                        console.log(datos);
 
                         fetch(URL_API_GET_ALL_VEHICLES)
                         .then(res => res.json())
-                        .then(datos => {
-                            let lastIndex = datos.at(- 1);
-                            swal({
-                                title: "Peticion Exitosa!",
-                                text: `Vehiculo agregado [${lastIndex.tipoVehiculo}] Exitosamente! \n Codigo de retiro: ${lastIndex.codigo}`,
-                                icon: "success",
+                        .then(info => {
+
+                            info.forEach(vehicles => {
+                                const objetoMasReciente = info.reduce((max, current) => {
+                                    return new Date(current.hora_entrada) > new Date(max.hora_entrada) ? current : max;
+                                }, info[0]);
+                                
+                                // // Obtener la propiedad que deseas del objeto más reciente
+                                // console.log(`La persona con la fecha más reciente es: ${objetoMasReciente.codigo}`);
+                                // console.log(`ID: ${objetoMasReciente.codigo}`);
+
+                                swal({
+                                    title: "Peticion Exitosa!",
+                                    text: `Vehiculo registrado [${tipo}] de forma exitosa! \n Codigo de retiro ${objetoMasReciente.codigo}`,
+                                    icon: "success",
+                                })
+                                .then(res => {
+                                    window.location = "./Cliente.html";
+                                })
                             })
-                            .then(res => {
-                                window.location = "./Cliente.html";
-                            })
+
+                            
+
+
                         })
+
+
                     })
                 }
 

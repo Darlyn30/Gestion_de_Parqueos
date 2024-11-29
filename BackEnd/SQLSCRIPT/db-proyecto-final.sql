@@ -303,22 +303,13 @@ select * from ingreso_auto
 
 --PENDIENTE
 exec RegistrarSalida @Code = '02215149', @TipoVehiculoId = 3 -- aqui hay un BUG, cuando registras una salida con un codigo que 
+--En el Front lo envito ya que aqui no pude
 --no esta en el registro se desocupa un parqueo de igual manera
-
 UPDATE Estacionamientos SET Ocupados = 0
 
 SELECT * FROM LogMessages
 
 DELETE FROM LogMessages
-
-
-
-
-
---ahora falta la parte que el administrador pueda tener una vista completa y el tema de los precios
-
-
-
 
 
 

@@ -9,7 +9,6 @@ const divs = {
     tarifas: document.querySelector(".tarifas"),
     vehiculosParqueo: document.querySelector(".vehiculosParqueo"),
     general: document.querySelector(".general"),
-
 }
 
 
@@ -45,6 +44,9 @@ function handleSectionClick(section){
             console.log('Acción para Registro General');
             VistaGeneral();
             break;
+        case 'Informe General':
+            infoGeneral();
+            break;
         case 'Cerrar Sesion':
             window.alert("Adios");
             window.location = "../Login/Login.html";
@@ -59,8 +61,7 @@ function home(){
     divs.disponibilidad.style.display = "none";
     divs.tarifas.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
-    divs.general.style.display = "none";
-    divs.home.style.display = "block";
+        divs.home.style.display = "block";
 
 
     fetch(URL_API) //esto es para el tema del nombre y eso
@@ -82,8 +83,7 @@ function disponibilidad(){
 
     divs.tarifas.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
-    divs.general.style.display = "none";
-    divs.home.style.display = "none";
+        divs.home.style.display = "none";
     divs.disponibilidad.style.display = "block";
 
     const tableBody = document.getElementById('crudTable').querySelector('tbody');
@@ -102,7 +102,7 @@ function disponibilidad(){
             const row = document.createElement("tr");
             row.innerHTML = `
             <td>${data[i].tipo}</td>
-            <td>${data[i].totalDisponibles}</td>
+            <td>${data[i].totalDisponibles -1}</td>
             <td>${data[i].ocupados}</td>
             <td>$ ${data[i].precio} /h</td>
             `;
@@ -116,8 +116,7 @@ function disponibilidad(){
 function tarifas(){
     divs.disponibilidad.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
-    divs.general.style.display = "none";
-    divs.home.style.display = "none";
+        divs.home.style.display = "none";
     divs.tarifas.style.display = "block";
 
 
@@ -173,8 +172,7 @@ function vehiculosParqueo(){
 
     divs.disponibilidad.style.display = "none";
     divs.tarifas.style.display = "none";
-    divs.general.style.display = "none";
-    divs.home.style.display = "none";
+        divs.home.style.display = "none";
     divs.vehiculosParqueo.style.display = "block";
 
     const URL_API_VIEW_PARKING_NOW = "https://localhost:7058/api/IngresoAuto";
@@ -249,9 +247,14 @@ function VistaGeneral(){
     divs.tarifas.style.display = "none";
     divs.vehiculosParqueo.style.display = "none";
     divs.home.style.display = "none";
-    divs.general.style.display = "block";
+    
 }
 
+function infoGeneral(){
+    //le hace un select donde se guardan las tablas 
+    alert("Descargando informe\nInforme guardado en... [RUTA]");
+    window.location = "./Dashboard.html";
+}
 
 //SIDEBAR ACTIVE METHOD
 
@@ -267,7 +270,7 @@ sideBarLinks.forEach(link => {
         // Agregar la clase 'active' al enlace clickeado
         link.classList.add('active');
 
-        // Llamar a la funcion handleSectionClick con el texto del enlace
+        // ejecuta la funcion con el texto del enlace
         handleSectionClick(link.textContent);
     });
 });

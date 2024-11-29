@@ -33,7 +33,8 @@ namespace Servidor.Services
                 {
                     // Los espacios disponibles se calculan restando los espacios ocupados del total fijo
                     int espaciosRestantes = item.TotalDisponibles - item.Ocupados;
-
+                    //tuve que dejarlo cuando quede un espacio disponible ya que si se llenan completo los parqueos se buguea
+                    //y no se deja eliminar
                     if (espaciosRestantes > 1)
                     {
                         status = true;

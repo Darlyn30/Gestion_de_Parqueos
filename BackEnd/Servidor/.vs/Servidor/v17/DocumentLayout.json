@@ -158,8 +158,7 @@
               "RelativeToolTip": "Servidor\\Models\\JsonResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:47:27.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:47:27.107Z"
             },
             {
               "$type": "Document",
@@ -171,8 +170,7 @@
               "RelativeToolTip": "Servidor\\Controllers\\EstacionamientoSetController.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAcwBkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T03:37:48.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T03:37:48.003Z"
             },
             {
               "$type": "Document",
@@ -206,7 +204,7 @@
               "RelativeDocumentMoniker": "Servidor\\Services\\VistaDisponibilidadService.cs",
               "ToolTip": "C:\\Users\\Admin\\Videos\\ProyectosJS\\proyecto-final-prog2\\BackEnd\\Servidor\\Servidor\\Services\\VistaDisponibilidadService.cs",
               "RelativeToolTip": "Servidor\\Services\\VistaDisponibilidadService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswCsAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAswCQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T10:59:01.974Z",
               "EditorCaption": ""
