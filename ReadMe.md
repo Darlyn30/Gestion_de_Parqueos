@@ -7,13 +7,12 @@ Este proyecto es un sistema de gestión de parqueos que consta de dos componente
 
 ### Interfaz de Cliente
 ![Interfaz de Cliente](./docs/images/client-interface.png)
-(./docs/images/retiro-vehiculo.png)
-*Vista principal de la interfaz del cliente*
+![Retiro de vehiculo](./docs/images/retiro-vehiculo.png)
 
 ### Panel de Administración
 ![Panel de Administración](docs/images/admin-dashboard.png)
-(docs/images/admin-dashboard2.png)
-*Dashboard del administrador*
+![Panel de administracion](docs/images/admin-dashboard2.png)
+
 
 ### Sistema de Login
 ![Login](docs/images/login-screen.png)
