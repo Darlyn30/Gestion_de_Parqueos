@@ -51,7 +51,7 @@ El backend está estructurado de la siguiente manera:
 - Conexión a internet
 
 ### Backend
-- .NET Framework (versión específica según el proyecto)
+- .NET Framework v8.0
 - SQL Server
 - Servidor web compatible con ASP.NET
 
